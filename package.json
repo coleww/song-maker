@@ -12,6 +12,10 @@
     "async": "^1.5.2",
     "cheerio": "^0.20.0",
     "chord-parser": "^0.1.1",
+    "lodash.flatten": "^4.2.0",
+    "lodash.uniq": "^4.2.1",
+    "midi-note": "^1.0.0",
+    "music-key": "^0.1.1",
     "request": "^2.71.0",
     "ultimate-guitar-scraper": "^0.3.0",
     "work-ethic": "^1.1.0"
