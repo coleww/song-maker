@@ -19,21 +19,66 @@ function getSections (tabData) {
   return sections
 }
 
-var STRING_NOTES = ['e', 'a', 'd', 'g', 'b', 'e']
-var ALL_NOTES = ['e', 'f', 'f#', 'g', 'g#', 'a', 'a#', 'b', 'c', 'c#', 'd', 'd#']
-ALL_NOTES = ALL_NOTES.concat(ALL_NOTES).concat(ALL_NOTES) // if yr guitar has more than 30 frets i dont want yr song anyways
+var MIDI_NOTES = [40, 45, 50, 55, 59, 64] // maybe easier to keep this all in midi-note land?
 function replaceNotes (section) {
-  return section.reverse().map(function (line, i) {
-    var root = STRING_NOTES[i]
-    var rootIndex = ALL_NOTES.indexOf(root)
+  return JSON.parse(JSON.stringify(section)).reverse().map(function (line, i) {
+    var root = MIDI_NOTES[i]
     var notes = line.replace(/[^\d-]/g, '').split('-')
     return notes.map(function (note) {
-      return note.length ? ALL_NOTES[rootIndex + ~~note] : note
+      return note.length ? root + ~~note : note
     })
   }).reverse()
 }
 
+
+function convertNotesToIndices (notes, divisor, key) {
+  // converts guitar strings worth of notes into indexes and stuff
+  return notes.map(function (row) {
+    return splitUp(row, divisor).map(function (part) {
+      return part.filter(function (n) {return n.length}).map(function (note) {
+
+      })
+    })
+  })
+}
+
+
+function convertNotesToMidi (notes, divisor, key) {
+  // eh, wouldn't be toooooo hard to do this....
+}
+
 module.exports = {
   getSections: getSections,
-  replaceNotes: replaceNotes
+  replaceNotes: replaceNotes,
+  convertNotesToIndices: convertNotesToIndices,
+  convertNotesToMidi: convertNotesToMidi
+}
+
+
+
+// http://stackoverflow.com/a/8188682
+function splitUp(arr, n) {
+    var rest = arr.length % n, // how much to divide
+        restUsed = rest, // to keep track of the division over the elements
+        partLength = Math.floor(arr.length / n),
+        result = [];
+
+    for(var i = 0; i < arr.length; i += partLength) {
+        var end = partLength + i,
+            add = false;
+
+        if(rest !== 0 && restUsed) { // should add one element for the division
+            end++;
+            restUsed--; // we've used one division element now
+            add = true;
+        }
+
+        result.push(arr.slice(i, end)); // part of the array
+
+        if(add) {
+            i++; // also increment i in the case we added an extra element for division
+        }
+    }
+
+    return result;
 }
