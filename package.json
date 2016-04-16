@@ -12,6 +12,8 @@
     "async": "^1.5.2",
     "cheerio": "^0.20.0",
     "chord-parser": "^0.1.1",
+    "lodash.chunk": "^4.0.5",
+    "lodash.fill": "^3.3.4",
     "lodash.flatten": "^4.2.0",
     "lodash.uniq": "^4.2.1",
     "midi-note": "^1.0.0",

@@ -24,3 +24,11 @@ tap.equal('Eb major', processor.getKey(sectionNotes))
 tap.equal(53, processor.getMiddle(sectionNotes))
 tap.equal(processor.getRootNoteNumber(40, 'F'), 41)
 tap.equal(processor.getRootNoteNumber(40, 'Db'), 37)
+
+var processedSection = [
+  [ 9, 5, 0, 0, -5, -7, -12 ],
+  [],
+  [ 11, 9, 6, 5, 2, 0, -3, -7, -8, -13 ],
+  [ 8, 8, 3, 3, -4, -4 ] ]
+
+tap.deepEqual(processor.convertNotesToIndices(sectionNotes, 4, 53), processedSection)

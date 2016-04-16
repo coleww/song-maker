@@ -1,8 +1,9 @@
 var midinote = require('midi-note')
 var uniq = require('lodash.uniq')
 var flatten = require('lodash.flatten')
+var chunk = require('lodash.chunk')
 var key = require('music-key')
-
+var fill = require('lodash.fill')
 
 
 function getSections (tabData) {
@@ -76,17 +77,21 @@ function getRootNoteNumber (middle, target) {
     return theRoot
   }
 }
-// function convertNotesToIndices (notes, beats, key) {
-//   // converts guitar strings worth of notes into indexes and stuff
-// var divisor = notes[0].length / beats
-//   return notes.map(function (row) {
-//     return chunk(row, divisor).map(function (part) {
-//       return part.filter(function (n) {return n.length}).map(function (note) {
-
-//       })
-//     })
-//   })
-// }
+function convertNotesToIndices (notes, beats, rootNote) {
+  // converts guitar strings worth of notes into indexes and stuff
+  var divisor = ~~(notes[0].length / beats)
+  return notes.map(function (row) {
+    return chunk(row, divisor).map(function (part) {
+      return part.filter(function (n) {return n}).map(function (note) {
+        return note - rootNote
+      })
+    })
+  }).reduce(function (result, row) {
+    return result.map(function (section, i) {
+      return section.concat(row[i])
+    })
+  }, fill(Array(beats), []))
+}
 
 
 // function convertNotesToMidi (notes, divisor, key) {
@@ -98,8 +103,8 @@ module.exports = {
   replaceNotes: replaceNotes,
   getKey: getKey,
   getMiddle: getMiddle,
-  getRootNoteNumber: getRootNoteNumber
-  // convertNotesToIndices: convertNotesToIndices,
+  getRootNoteNumber: getRootNoteNumber,
+  convertNotesToIndices: convertNotesToIndices,
   // convertNotesToMidi: convertNotesToMidi
 }
 
