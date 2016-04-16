@@ -21,3 +21,6 @@ var sectionNotes = [
   [ '', '', 41, '', '', '', '', '', '', '', '', '', '', '', '', 40, '', '', '', '', '', '', '', '', '' ] ]
 tap.deepEqual(sectionNotes, processor.replaceNotes(sectionTab))
 tap.equal('Eb major', processor.getKey(sectionNotes))
+tap.equal(53, processor.getMiddle(sectionNotes))
+tap.equal(processor.getRootNoteNumber(40, 'F'), 41)
+tap.equal(processor.getRootNoteNumber(40, 'Db'), 37)
