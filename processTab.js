@@ -47,6 +47,7 @@ function getKey (section) {
   var accidentals = uniq(flatten(notes)).map(function (note) {
     return note.replace(/^\w/, '')
   }).filter(function (e) {return e})
+  console.log(key(accidentals.join('')))
   return key(accidentals.join(''))
 }
 
@@ -78,10 +79,16 @@ function getRootNoteNumber (middle, target) {
 function convertNotesToIndices (notes, beats, rootNote) {
   // converts guitar strings worth of notes into indexes and stuff
   var divisor = ~~(notes[0].length / beats)
+  var root = midinote(rootNote).replace(/\d+/, '')
+  // ... maybe, get the scale?
   return notes.map(function (row) {
     return chunk(row, divisor).map(function (part) {
       return part.filter(function (n) {return n}).map(function (note) {
-        return note - rootNote
+        midinote(note)
+        var posi = note > rootNote
+
+// BAH HOW TO DO THIS HERE WAHAHAHAHAHAHA
+        return  // HERE, this is semitones, not key indices :<
       })
     })
   }).reduce(function (result, row) {
@@ -91,6 +98,14 @@ function convertNotesToIndices (notes, beats, rootNote) {
   }, fill(Array(beats), []))
 }
 
+function processTab (tab, beats) {
+  var notes = replaceNotes(getSections(tab))
+  // something borked here
+  var root = getRootNoteNumber(getMiddle(notes), getKey(notes))
+  return notes.map(function (section) {
+    return convertNotesToIndices(section, beats, root)
+  })
+}
 
 module.exports = {
   getSections: getSections,
@@ -99,6 +114,7 @@ module.exports = {
   getMiddle: getMiddle,
   getRootNoteNumber: getRootNoteNumber,
   convertNotesToIndices: convertNotesToIndices,
+  processTab: processTab
   // convertNotesToMidi: convertNotesToMidi
 }
 

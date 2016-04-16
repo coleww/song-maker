@@ -1,0 +1,1555 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <script>
+(function(d,s,l){if (!(typeof Promise === 'function' && 'Promise' in window)) {var s=d.createElement('script'),h=d.getElementsByTagName('head')[0];s.src=l;s.type = "text/javascript";h.appendChild(s);}}(document, 'script', '//cdn.ustatik.com/plus/vendor/es6-promise.min.js'));
+</script>    <meta content="https://cdn.ustatik.com/_img/ug-logo-fb.png" property="og:image">
+<meta content="Iron Man" property="og:title">
+<meta content="Tab (ver 8) by Black Sabbath" property="og:description">
+<meta content="https:///_img/ug-logo-fb.png" property="og:image">
+<meta content="180" property="og:image:width">
+<meta content="180" property="og:image:height">
+<meta content="Tabs" property="twitter:app:name:iphone">
+<meta content="357828853" property="twitter:app:id:iphone">
+<meta content="ultimateguitartabs://action=show_text_tab&amp;tabid=21318" property="twitter:app:url:iphone">
+<meta content="Tabs HD" property="twitter:app:name:ipad">
+<meta content="404167616" property="twitter:app:id:ipad">
+<meta content="ultimateguitartabsipad://action=show_text_tab&amp;tabid=21318" property="twitter:app:url:ipad">
+<link href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver8_tab.htm" rel="canonical">
+<link href="android-app://com.ultimateguitar.tabs/ultimateguitartabs/tab/21318" rel="alternate">
+<link href="android-app://com.ultimateguitar.tabprofree/ultimateguitartabs/tab/21318" rel="alternate">    <script type="text/javascript">var js_img_domain = 'cdn.ustatik.com';</script><script async src="//tag.bounceexchange.com/1581/i.js"></script>
+<title>Iron Man Tab (ver 8) by Black Sabbath @ Ultimate-Guitar.Com</title>
+<meta name="description" content="Iron Man tab (ver 8) by Black Sabbath with free online tab player, speed control and loop. Correct version. Added on December 21, 2001">
+<meta name="keywords" content="Iron Man, Tab, Black Sabbath, Ultimate-Guitar.Com, ug">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=1280, minimum-scale=0.1, maximum-scale=2.0" />
+
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" type="image/x-icon" href="//cdn.ustatik.com/_img/bootstrap/ug/img/favicon.ico">
+<link rel="apple-touch-icon" href="//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/apple-touch-icon.png" />
+<link rel="apple-touch-icon" sizes="76x76" href="//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" sizes="152x152" href="//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/apple-touch-icon-152x152.png" />
+<meta name="application-name" content="Ultimate Guitar" />
+<meta name="msapplication-TileColor" content="#f2f2f2"/>
+<meta name="msapplication-TileImage" content="//cdn.ustatik.com/_img/bootstrap/ug/img/touchicons/mediumtile.png">
+<link rel="STYLESHEET" type="text/css" href="//cdn.ustatik.com/_img/common_ver2741545334.css">
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/cpjmidngbpgnobnojpjgkidfnapkbieg">
+<link rel="search"
+    type="application/opensearchdescription+xml"
+    href="//cdn.ustatik.com/opensearch/opensearch.xml"
+    title="Ultmate-Guitar tabs & chords search" /><meta name="csrf-param" content="_csrf">
+    <meta name="csrf-token" content="bC5zYzhVSngLXx4kSmAlDwVNGiVgFwgiBm8sV1o8AhUFGTomQhMQHw==">
+
+    <script>
+function load_async(url, callback) {
+    var script = document.createElement("script"),loaded;
+    script.async = true;
+    script.crossOrigin  = 'anonymous';
+    script.src = url;
+    if (callback) {
+        script.onreadystatechange = script.onload = function() {
+            if (!loaded) callback();loaded = true;
+        };
+    }
+
+    document.getElementsByTagName('head')[0].appendChild(script);
+}
+</script><script>
+load_async("//cdn.ravenjs.com/2.1.1/raven.min.js", function() {
+    Raven.config('http://d4540345e6e6462297450533458233ac@control.ultimate-guitar.com/9', {
+        shouldSendCallback: function(data) {
+            var sampleRate = 10;
+            return (Math.random() * 100 <= sampleRate);
+        }
+    }).install();
+    var _r = window._r || [];
+    for (var i = 0; i < _r.length; i++) {
+        Raven.captureMessage('Message: ' + _r[i][0] + ' - URL: ' + _r[i][1] + ' - Line: ' + _r[i][2])
+    }
+});
+
+(function(w){
+    if (typeof Raven === 'undefined') {
+        w._r = w._r || [];
+        w.onerror = function e(msg, url, ln) {
+            w._r.push([msg, url, ln]);
+        }
+    }
+})(window);
+</script>
+
+<script>
+var country = document.location.href.indexOf('gpads_debug_US') > -1 ? 'US' : 'US';
+var pb_countries = ['US', 'GB', 'DE'];
+var app_label = 'tab_desktop_version';
+
+load_async('//cdn.ustatik.com/js/gpads/gpads_ver2741545334.js');
+
+window.gpads = (window.gpads || {});
+window.gpads.que = window.gpads.que || [];
+
+if (window.navigator.userAgent.indexOf('Opera') > -1)
+{
+    window.gpads.que.push = function(ad){document.write('<scr'+'ipt src="//ib.adnxs.com/ttj?id='+ad.p+'&size='+ad.w+'x'+ad.h+ad.q_str+'"></scr'+'ipt>');};
+}
+else if (pb_countries.indexOf(country) === -1 || app_label === 'search')
+{
+    window.gpads.bidding_complete = true;
+}
+else
+{
+    load_async('//cdn.ustatik.com/vendor/prebid_ver2741545334.js');
+     
+    var pbjs = pbjs || {};
+    pbjs.que = pbjs.que || [];
+
+    window.gpads.biddingComplete = window.gpads.biddingComplete || function(){
+        window.gpads.bidding_complete = true;
+    };
+            
+    pbjs.que.push(function() {
+        var adUnits = [{
+            code: '/19968336/header-bid-tag-0',
+            sizes: [[728, 90], [160, 600], [300, 250]], //$header_bidding['sizes']
+            bids: [{bidder: 'amazon'}]
+        }];
+        pbjs.addAdUnits(adUnits);
+
+        var A9Adaptor = function A9Adaptor() {
+            return {
+                callBids: function(p) {
+                    pbjs.loadScript('//c.amazon-adsystem.com/aax2/amzn_ads.js', function() {
+                        amznads.getAdsCallback(3246, function() {
+                            pbjs.bidsAvailableForAdapter('amazon');
+                        });
+                    });
+                }
+            };
+        };
+        pbjs.registerBidAdapter(A9Adaptor, 'amazon');
+        pbjs.requestBids({
+            timeout: navigator.userAgent.match(/Android/i) ? 1500 : 1000,
+            bidsBackHandler: function(bidResponses) {
+                window.gpads.biddingComplete();
+            }
+        });
+    });
+}
+        
+</script></head>
+<body leftmargin="0" topmargin="0" bgcolor="#000000" background="//cdn.ustatik.com/_img/bgd.gif" class="is_desktop">
+                    <script>
+    var SplashParams = {"is_splash_user":false,"ga_tracker":null,"GA_events":[],"YM_events_map":[],"cookie_domain":"ultimate-guitar.com","cookie_big_splash_shown":"show_ugt_splash","cookie_inter_allowed":"inter_al","page_type":"tab","device_type":null,"AB_value":null,"trackingOptions":{"mobile":6},"counters":{"big":{"cookie_count_name":"was_bs_shown3","max_splash_count":5}},"counters_ttl":360,"tab_buttons":[],"tab_links":[]};
+    SplashParams.items = {};
+
+    </script>
+
+
+        <center id="page-wrapper">
+            <div style="background:#000;width:986px" align="left" class="page-wrap">
+                <!--HEADER-->
+
+<div class="width-h">
+<div class="header bdrunion">
+	<div class="h-menu bdrunion">
+        
+<a href="http://plus.ultimate-guitar.com/tab-pro/" class="plusik f-right" ><b title="Tab Pro" class="f-left"></b><span>Tab Pro</span></a>
+        <a href="https://www.ultimate-guitar.com/">guitar tabs</a> /
+        <a href="https://www.ultimate-guitar.com/updates/">updates</a> /
+        <a href="https://www.ultimate-guitar.com/news/">news</a> /
+        <a href="https://www.ultimate-guitar.com/reviews/">reviews</a> /
+        <a href="https://www.ultimate-guitar.com/interviews/">interviews</a> /
+        <a href="https://www.ultimate-guitar.com/columns/">columns</a> /
+        <a href="https://www.ultimate-guitar.com/lessons/">lessons</a> /
+        <a href="http://www.ultimate-guitar.com/forum/">forums</a> /
+        <a href="https://www.ultimate-guitar.com/components/beta/" >beta</a>
+        	</div>
+	<div class="h-logo">
+		<table cellspacing=0 cellpadding=2>
+			<tr>
+				<td class="logo-col">
+                    <div class="logoplace"><a href="https://www.ultimate-guitar.com/" class="logolink db"></a></div>
+											<div class="updmsg">
+							<strong>Iron Man tab</strong> by <b>Black Sabbath</b>, added: <b>December 21st, 2001</b>						</div>
+									</td>
+								<td class="div-col bdrunion"></td>
+
+
+
+
+
+
+
+
+				<td class="login-col">
+					<div class="loginplace">
+                        <div id="login_user_auth" class="dn">
+                            <div class="log_ld">
+                                <a class="log_ico" href="http://www.ultimate-guitar.com/forum/profile.php?do=editavatar"><table cellpadding="0" cellspacing="0"><tr><td align="center" valign="middle" id="header_login_ava"><img src="//cdn.ustatik.com/users/0/0/0/0.gif?d=d" /></td></tr></table></a>
+                                <div class="log_out"><a href="#" class="logout sm1" id="js-user-logout"><b></b>Logout</a></div>
+                            </div>
+                            <div class="log_inf">
+                                <div class="fader2 log_name">
+                                    <ins></ins><a href="http://profile.ultimate-guitar.com/" class="userico" id="username_header">
+                                    <b class="f-left"></b></a>
+                                </div>
+                                <div class="proflinks">
+                                    <div class="right">
+                                        <a href="http://plus.ultimate-guitar.com/" class="nowrap"><b class="dot_usr f-left"></b>UG Plus</a>
+                                        <a href="http://my.ultimate-guitar.com/main.php?mode=favorites"><b class="dot_usr f-left"></b>Favorites</a>
+                                    </div>
+                                    <div class="left">
+                                        <a href="http://my.ultimate-guitar.com/"><b class="dot_usr f-left"></b>Profile</a>
+                                        <span class="nowrap head-hist-btn" href="#" ><b class="dot_usr f-left"></b><span>History</span>
+    <div class="history-tooltip-container">
+        <div class="history-tooltip" id="history-tooltip">
+            <div class="inner">
+                <div class="head">Recently viewed tabs</div>
+                <div class="history-items">
+                    <div class="no-tabs">
+                        No tabs to display.
+                    </div>
+                </div>
+                <div class="bottom">
+                    <a href="https://www.ultimate-guitar.com/top/top100.htm" class="f-left">Popular tabs</a>
+                    <a href="https://www.ultimate-guitar.com/tabs/" class="f-right">Fresh tabs</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</span>                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="login_user_guest" class="log_h ">
+                            <div class="log_txt">
+                                Welcome home, <b>Stranger</b><br>
+                                Please <a class="auth_sign_in" href="http://www.ultimate-guitar.com/forum/login.php">Sign in</a> or <a class="auth_sign_up" href="#">Sign up</a>
+                            </div>
+                            <div class="line_txt">
+                                <div></div>
+                                <span class="inline_txt">you can also use</span>
+                            </div>
+                            <div class="s_up">
+                                <a href="https://www.ultimate-guitar.com/user/auth/login?service=facebook" class="log_fb auth_s"><span><b></b></span>Facebook</a>
+                                <a href="https://www.ultimate-guitar.com/user/auth/login?service=google" class="log_g auth_s auth_g"><span><b></b></span>Google</a>
+                            </div>
+                        </div>
+					</div>
+				</td>
+							</tr>
+		</table>
+	</div>
+</div>
+<!--/HEADER-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--ADSSEARCH-->
+<div style="margin: 0 3px" id="advanced_search">
+    <table cellspacing="0" cellpadding="0" style="background:#000; width:100%; margin:0px auto">
+        
+                            
+                <tr>
+                    <td class="b bdrunion" style="display: block!important; padding: 7px 0 10px 0; vertical-align: middle; text-align: center; min-height: 109px;">
+                                                <script id="ad_cs_2010320_728_90">window.gpads.que.push({cs: 'ad_cs_2010320_728_90', p: 2010320, w: 728, h: 90, q_str: '&artist=1898&title=ironman&instr=guitar', amzn: '7x9'});</script>
+                                                </td>
+                </tr>
+                
+            	        <tr>
+          <td class="b bdrunion" align="center" style="padding:2px">
+            <table cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" width="100%" class="search-main">
+                            <tr>
+								<td class="tdsearch" align="right">
+									<div id="search_bar_simple" >
+                                        <form action="https://www.ultimate-guitar.com/search.php" class="mp0" autocomplete="off">
+                                            <table cellpadding="0" cellspacing="0" class="search-table">
+                                                <tr>
+                                                    <td width="20%">
+                                                        <div class="searchsel">
+                                                            <div class="selwin">
+                                                                <a href="#" value="title">TABS</a>
+                                                                <a href="#" value="band">ARTISTS</a>
+                                                                <b>&nbsp;</b>
+                                                                <a href="#" value="news">NEWS</a>
+                                                                <a href="#" value="reviews">REVIEWS</a>
+                                                                <a href="#" value="interviews">INTERVIEWS</a>
+                                                                <a href="#" value="columns">COLUMNS</a>
+                                                                <a href="#" value="lessons">LESSONS</a>
+                                                                <b>&nbsp;</b>
+                                                                <a href="#" value="users">USERS</a>
+                                                                <input type="hidden" name="search_type" id="w" value="title">
+                                                                <input type="hidden" name="order" id="search-order" value="">
+                                                            </div>
+                                                            <div class="selcurr"><b class="f-right"></b> TABS</div>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <div class="searchinp">
+                                                            <input id="search_input" type="text" name="value" size="34" class="search_input" value="">
+                                                        </div>
+                                                    </td>
+                                                    <td width="70">
+                                                        <div class="searchbut"><input type="submit" value="Search!"></div>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </form>
+                                    </div>
+                                    									<div class="alphadiv">
+                                        <a href="https://www.ultimate-guitar.com/tabs/" class="alpha_b13">FRESH TABS</a>
+										<b style="color:#777" class="ver">|</b>
+										<span class="alph">
+											<a href="https://www.ultimate-guitar.com/bands/0-9.htm" class=wb>0-9</a>
+											<a href="https://www.ultimate-guitar.com/bands/a.htm" class=wb>A</a>
+											<a href="https://www.ultimate-guitar.com/bands/b.htm" class=wb>B</a>
+											<a href="https://www.ultimate-guitar.com/bands/c.htm" class=wb>C</a>
+											<a href="https://www.ultimate-guitar.com/bands/d.htm" class=wb>D</a>
+											<a href="https://www.ultimate-guitar.com/bands/e.htm" class=wb>E</a>
+											<a href="https://www.ultimate-guitar.com/bands/f.htm" class=wb>F</a>
+											<a href="https://www.ultimate-guitar.com/bands/g.htm" class=wb>G</a>
+											<a href="https://www.ultimate-guitar.com/bands/h.htm" class=wb>H</a>
+											<a href="https://www.ultimate-guitar.com/bands/i.htm" class=wb>I</a>
+											<a href="https://www.ultimate-guitar.com/bands/j.htm" class=wb>J</a>
+											<a href="https://www.ultimate-guitar.com/bands/k.htm" class=wb>K</a>
+											<a href="https://www.ultimate-guitar.com/bands/l.htm" class=wb>L</a>
+											<a href="https://www.ultimate-guitar.com/bands/m.htm" class=wb>M</a>
+											<a href="https://www.ultimate-guitar.com/bands/n.htm" class=wb>N</a>
+											<a href="https://www.ultimate-guitar.com/bands/o.htm" class=wb>O</a>
+											<a href="https://www.ultimate-guitar.com/bands/p.htm" class=wb>P</a>
+											<a href="https://www.ultimate-guitar.com/bands/q.htm" class=wb>Q</a>
+											<a href="https://www.ultimate-guitar.com/bands/r.htm" class=wb>R</a>
+											<a href="https://www.ultimate-guitar.com/bands/s.htm" class=wb>S</a>
+											<a href="https://www.ultimate-guitar.com/bands/t.htm" class=wb>T</a>
+											<a href="https://www.ultimate-guitar.com/bands/u.htm" class=wb>U</a>
+											<a href="https://www.ultimate-guitar.com/bands/v.htm" class=wb>V</a>
+											<a href="https://www.ultimate-guitar.com/bands/w.htm" class=wb>W</a>
+											<a href="https://www.ultimate-guitar.com/bands/x.htm" class=wb>X</a>
+											<a href="https://www.ultimate-guitar.com/bands/y.htm" class=wb>Y</a>
+											<a href="https://www.ultimate-guitar.com/bands/z.htm" class=wb>Z</a>
+										</span>
+										<b style="color:#777" class="ver">|</b>
+										<a href="https://www.ultimate-guitar.com/top/" class="alpha_b13">TOP 100 TABS</a>
+									</div>
+								</td>
+								<td class="searchadv">
+                                    <span class="dib">
+                                        <a href="https://www.ultimate-guitar.com/advanced_search.html" class="gray aria undl advanced"><b class="dibimg"></b> Advanced</a>
+                                                                            </span>
+                                </td>
+								<td width="2" valign="top"><div class="polosochka"></div></td>
+								<td class="tdsubmit" align="left">
+									+ <a href="https://www.ultimate-guitar.com/contribution/submit/tabs" class="w10verd">Submit tab</a><br>
+									+ <a href="https://www.ultimate-guitar.com/submit/reviews.php" class="w10verd auth_sign_in auth_continue">Submit review</a><br>
+									+ <a href="https://www.ultimate-guitar.com/submit/articles.php" class="w10verd auth_sign_in auth_continue">Submit article</a><br>
+								</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+          </td>
+        </tr>
+    </table>
+</div>
+</div><!--/ADSSEARCH-->
+<script>
+    var ug_user_id=0;
+</script>                
+    <link href="//cdn.ustatik.com/_img/tabs/style_ver2741545334.css" rel="stylesheet">
+
+    
+    <div class="shtorki dn" id="popup_shtorki"></div>
+    <div class="contentwr" style="text-align: left">
+        <div id="error_layer" class="poplayer dn" style="position: fixed; margin-left:250px; width:400px; z-index: 10000">
+            <div class="pophdr clearfix"><span class="popclose close_error"></span><span id="error_layer_title" style='float: left'>Oops, an error</span></div>
+            <div class="popbody al-c fs15">
+                <span class="alertmess"></span>
+                <div class="mtop10"><input type="button" value="Close" class="btn1 close_error"></div>
+            </div>
+        </div>
+        <div id="prebuy_loader" class="poplayer dn" style="position: fixed; width:400px; z-index: 10000">
+            <div class="pophdr"><span class="prebuy_loader_title"></span></div>
+            <div class="popbody al-c fs15">
+                <div class="loadinfo2">
+                    <b class="loader">Loading.</b> Please wait.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="messages-container"
+     data-added-to-favorites="added to your favorites"
+     style="display: none"></div>
+    <div class="page_border">
+        <div class="page_bcg ">
+
+                            <script>
+    </script>            
+            <div class="t_header" itemscope itemtype="http://schema.org/CreativeWork">
+
+                <div class="t_title  ">
+                    <div>
+                        <h1 itemprop="name">Iron Man Tab</h1>
+                                                    <div class="t_versionspos">
+                                <div class="t_version--container">
+                                    <div class="t_version">
+                                        <b>version 8</b>
+                                    </div>
+                                    <div class="t_versions t_vers_types3">
+                                        <b>version 8</b>
+                                        <div class="versions_row">
+                                                                                                                                                                                            <div class="versions_column ">
+                                                        <h2>Whole song</h2>
+                                                        <ul>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 1</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver2_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 2</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver3_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 3</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver4_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 4</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver5_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 5</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver6_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 6</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver7_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 7</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li  class="curversion" >
+                                                                <a href="#"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 8</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                <span class="cur_slbi"></span>                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver9_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 9</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver10_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 10</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver11_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 11</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver12_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 12</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver13_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 13</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver14_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 14</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver15_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 15</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver16_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 16</a>                                                                    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver17_tab.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 17</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                    </ul>
+                                                    </div>
+                                                                                                                                                                                                <div class="versions_column versions_column__interactive">
+                                                        <h2>Interactive</h2>
+                                                        <ul>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#34863"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 1</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#3b1a2"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 2</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#42ad2"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 3</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#4879b"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 4</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#4879c"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 5</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#6d6de"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 6</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#7cc84"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 7</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#ed4c4"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 8</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="http://plus.ultimate-guitar.com/b/black_sabbath/iron_man_tab_online.html#121f9d"
+    rel="nofollow"
+    onclick="ga('send', 'event', 'Links', 'TP Link', 'TP Version Link Click');"
+    class="s_l">ver 9</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__half"></span>
+                                                                                                                                </li>
+                                                                                                                    </ul>
+                                                    </div>
+                                                                                                                                                                                                <div class="versions_column ">
+                                                        <h2>Video</h2>
+                                                        <ul>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_video_lesson.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 1</a>                                                                    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s l_s__active"></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver2_video_lesson_1209533id_17012013date.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 2</a>                                                                    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                        <li >
+                                                                <a href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver3_video_lesson_1690494id_16122014date.htm"
+    rel="nofollow"
+    onclick=""
+    class="s_l">ver 3</a>                                                                    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+    <span class="l_s "></span>
+                                                                                                                                </li>
+                                                                                                                    </ul>
+                                                    </div>
+                                                                                                                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                                            </div>
+                    <div class="t_autor">by <a href="https://www.ultimate-guitar.com/tabs/black_sabbath_tabs.htm">Black Sabbath</a></div>
+               </div>
+
+                                    <div class="stats">
+                        <b></b>
+                        9,800 views                        <span>6 this week</span>
+                    </div>
+                
+                <div class="separator">
+                </div>
+
+                <div class="t_comments">
+                    <b></b>
+                    <div class="t_comments_union show_comments">
+                        <span class="t_cbl">5 comments<span>read comments</span></span>
+                    </div>
+                </div>
+
+                <div class="separator">
+                </div>
+
+                <div class="raiting" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
+                    <meta itemprop="bestRating" content="5">
+                    <meta itemprop="worstRating" content="1">
+                    <meta itemprop="reviewCount" content="5">
+                    <meta itemprop="ratingValue" content="4">
+                    <div class="voting">
+            <a class="cur" href="#" data="top" data-rate="1">1</a>
+            <a class="cur" href="#" data="top" data-rate="2">2</a>
+            <a class="cur" href="#" data="top" data-rate="3">3</a>
+            <a class="cur" href="#" data="top" data-rate="4">4</a>
+            <a class="" href="#" data="top" data-rate="5">5</a>
+    </div>                    <div class="vote-success">accurate</div>
+                    <div class="v_c">
+                                                    x <span itemprop="ratingCount">9</span>
+                                            </div>
+                </div>
+
+            </div>
+
+            <div class="t_hs">
+            </div>
+
+            <div class="t_b">
+
+                <div class="clear_f">
+                    <div class="f-left">
+                    <div class="t_bl">
+                        <div class="t_tb b_f js-fav-add"><b></b>add to favorites</div>
+                                                                            <a class="t_tb b_a" href="#"><b></b>launch autoscroll</a>
+                                                            <div class="t_tb b_fs">
+                                    <i></i>
+                                    <div id="fontsize">font size</div>
+
+                                    <div id="fontsize_val">
+                                        <div id="fontsize_content_val">0</div>
+                                        <a id="fontsize_reset_val" class="" href="#"><div class="t_ri"></div>reset</a>
+                                    </div>
+
+                                    <div class="pm_p">
+                                        <a class="p_b" href="#"><b></b></a><a class="m_b" href="#"><b></b></a>
+                                    </div>
+                                </div>
+                                                        <a href="https://www.ultimate-guitar.com/lessons/for_beginners/how_to_read_tabs.html" class="t_tb t_tb__primary t_tb__primary-simple js-how-to-read-tabs" rel="nofollow" target="_blank" >
+      <div class="h_bi icon-question"></div>
+      how to read this tab</a>
+                        <a target="_blank" href="https://www.ultimate-guitar.com/tools/tuner" class="t_tb hide b_tuner js-tuner-btn"><i></i>guitar tuner</a>
+
+                                                    <div class="recom_bl">
+                                
+                                <div class="ab_left hide js-ab-partners">
+                                    <!--googleoff: all-->
+<div class="ab-partners-content js-ab-link">
+    <div class="ab-partners-content--title">From Our Partners</div>
+            <a href="https://youtu.be/qfEPhrdf0D8" class="ab-partners-content--article js-ab-partner-link" target="_blank" rel="nofollow" data-action="sweetwater" onclick="ga('send', 'event', 'native', 'sweetwater', 'click')">
+            <img src="//cdn.ustatik.com/_img/native/sweetwater_pedal.png" alt="" class="ab-partners-content--image">
+            <span class="ab-partners-content--link">Cool Pedal We Found At NAMM</span>
+        </a>
+            <a href="https://reverb.com/blog/6-steps-building-custom-pedalboard-rig?_aid=ug-ads" class="ab-partners-content--article js-ab-partner-link" target="_blank" rel="nofollow" data-action="reverb_2" onclick="ga('send', 'event', 'native', 'reverb_2', 'click')">
+            <img src="//cdn.ustatik.com/_img/native/reverb2_pedalboard.png" alt="" class="ab-partners-content--image">
+            <span class="ab-partners-content--link">Building out a pedalboard? These 6 tips will maximize your rig</span>
+        </a>
+            <a href="https://www.youtube.com/watch?v=DAx1Serx1xo&list=RDDAx1Serx1xo&index=1" class="ab-partners-content--article js-ab-partner-link" target="_blank" rel="nofollow" data-action="yamaha_2" onclick="ga('send', 'event', 'native', 'yamaha_2', 'click')">
+            <img src="//cdn.ustatik.com/_img/native/yamaha_acoustic.png" alt="" class="ab-partners-content--image">
+            <span class="ab-partners-content--link">Watch this guy shred on acoustic!</span>
+        </a>
+            <a href="http://ddar.io/1nGEpN2" class="ab-partners-content--article js-ab-partner-link" target="_blank" rel="nofollow" data-action="daddario" onclick="ga('send', 'event', 'native', 'daddario', 'click')">
+            <img src="//cdn.ustatik.com/_img/native/six.png" alt="" class="ab-partners-content--image">
+            <span class="ab-partners-content--link">The Six That Get You click here for more</span>
+        </a>
+    </div>
+<!--googleon: all-->                                </div>
+                                <div class="adv_left js-ab-regular">
+                                    <script id="ad_cs_2010320_160_600">
+                                    window.gpads.que.push({
+                                        cs: 'ad_cs_2010320_160_600',
+                                        p: 2010320, 
+                                        w: 160, 
+                                        h: 600, 
+                                        q_str: '&artist=1898&instr=guitar&song_name=iron+man', 
+                                        amzn: '1x6', 
+                                        lvars: {
+                                            'banner_artist_name': 'Black Sabbath',
+                                            'banner_song_name': 'iron man'
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                
+                            </div>
+                            <form action="https://www.ultimate-guitar.com/components/sms/sendLink" class="adv-sms-fixed js_sms_form_layer" style="display: none;" method="POST">
+    <div class="js-sms-close adv-sms-fixed--close">&times;</div>
+    <div class="adv-sms-fixed--btn-round js_sms_show_form_btn">
+        <svg viewBox="0 0 78.369 78.369" class="svg-mark">
+            <path d="M78.049,19.015L29.458,67.606c-0.428,0.428-1.121,0.428-1.548,0L0.32,40.015c-0.427-0.426-0.427-1.119,0-1.547l6.704-6.704 c0.428-0.427,1.121-0.427,1.548,0l20.113,20.112l41.113-41.113c0.429-0.427,1.12-0.427,1.548,0l6.703,6.704 C78.477,17.894,78.477,18.586,78.049,19.015z"/>
+        </svg>
+    </div>
+    <div class="adv-sms-fixed--tooltip js-sms-tooltip">
+        Save “Iron Man”
+        Tab        to your phone
+    </div>
+    <div class="adv-sms-fixed--section js_sms_content">
+        <div class="adv-sms--loader">
+            <svg class="circular-loader" height="50" width="50">
+               <circle class="path" cx="25" cy="25.2" r="19.9" fill="none" stroke-width="3.8" stroke-miterlimit="10"></circle>
+            </svg>
+        </div>
+        <div class="adv-close js_sms_close_btn">&times;</div>
+        <div class="adv-sms-fixed--header">
+            Sending tab
+        </div>
+        <div class="adv-sms-fixed--content"></div>
+        <div class="adv-sms-fixed--footer">
+            <div class="adv-sms-fixed--input-group">
+                <div class="adv-sms-fixed--feedback js_sms_error_message">Unknown error</div>
+                <span class="adv-sms-fixed--input-group-addon">+1</span>
+                <input type="tel" name="adv-sms-number" class="adv-sms-fixed--input js_input_phone" placeholder="555-500-0000">
+            </div>
+            <input type="hidden" name="id" value="21318">
+            <input type="submit" value="Text Me a Tab" class="adv-sms-fixed--btn">
+        </div>
+    </div>
+</form>                            <div class="js-tpw-tools-separator" style="clear: both;"></div>
+<a
+    class="b-tpw-tools js-tpw-tools"
+    href="http://plus.ultimate-guitar.com/tp/?artist=Black+Sabbath&song=Iron+Man&t=MjE1MTM5fA%3D%3D"
+    target="_blank"
+    onclick="ga_track_event(['_trackEvent', 'Tab Page', 'Tab Pro Buttons', 'Tab Pro Tools Click']);"
+>
+    <div class="b-tpw-tools--heading">
+        <div class="b-tpw-tools--logo"></div>
+        <b><span>Tab Pro</span>&nbsp;tools</b>
+    </div>
+    <ul class="b-tpw-tools--list">
+        <li class="b-tpw-tools--play">
+            <div class="b-tpw-tools--icon b-tpw-tools--icon__play"></div>
+            play this tab        </li>
+        <li>
+            <div class="b-tpw-tools--icon b-tpw-tools--icon__loop"></div>
+            loop segment        </li>
+        <li>
+            <div class="b-tpw-tools--icon b-tpw-tools--icon__change"></div>
+            change instrument        </li>
+        <li>
+            <div class="b-tpw-tools--icon b-tpw-tools--icon__fret"></div>
+            show fretboard        </li>
+        <li>
+            <div class="b-tpw-tools--icon b-tpw-tools--icon__metronome"></div>
+            metronome        </li>
+    </ul>
+</a>
+                            
+                                <div class="adv_left is_hidden js-adv-long-page-container">
+                                    <script id="ad_cs_2010319_160_600">
+                                        function initScrollAd()
+                                        {
+                                            window.gpads.que.push({
+                                                cs: 'ad_cs_2010319_160_600',
+                                                p: 2010319, 
+                                                w: 160, 
+                                                h: 600, 
+                                                q_str: '&artist=1898&instr=guitar&song_name=iron+man',
+                                                lvars: {
+                                                    'banner_artist_name': 'Black Sabbath',
+                                                    'banner_song_name': 'iron man'
+                                                }
+                                            });
+                                        }
+                                    </script>
+                                </div>
+                            
+                                            </div>
+                </div>
+
+                
+                <div class="t_br  float_player">
+                                                                        <div class="p_h">
+                                <style>.b-player-fake-side-youtube-52128{background: url('https://i.ytimg.com/vi/jfOZYPp207c/mqdefault.jpg');}</style>
+<a
+    href="http://plus.ultimate-guitar.com/tp/?artist=Black+Sabbath&song=Iron+Man&t=MjE1MTM5fA%3D%3D"
+    target="_blank"
+    onclick="ga_track_event(['_trackEvent', 'Tab Page', 'Tab Pro Buttons', 'Tab Pro Buttons Click']);"
+    class="js-tpw-player-side hide b-player-fake-side b-player-fake-side-youtube-52128"
+>
+  <div class="js-close b-close">&times;</div>
+  <div class="btn-play"></div>
+  <div class="js-txt txt">Best way to learn<br> "Iron Man"</div>
+</a>                            </div>
+                                                                <div id="scroll_holder" >
+                                                                        <div id="whole_scroll" class="autoscroll_controller">
+                            <div class="autoscroll_controller_header">
+                                <img class="ch_hm" src="//cdn.ustatik.com/img/1x1.gif">
+                                Autoscroll                                <img src="//cdn.ustatik.com/img/1x1.gif" class="autoscroll_controller_exit">
+                            </div>
+                            <div id='scroll' style='position: absolute;'>
+                                <div class="ascr">
+                                    <a id='dec_speed' class="pmpp1">slow</a>
+                                    <div class="autoscroll_table_handler">
+                                        <div id='speed'><div id="spd_1"></div><div id="spd_2"></div><div id="spd_3"></div><div id="spd_4"></div><div id="spd_5"></div></div>
+                                    </div>
+                                    <a id='inc_speed' class="pmpp2" >fast</a>
+
+                                    <div class='scrollhint'>
+                                        <div class="autoscroll_controller_left">+/-<br>esc
+                                        </div>
+                                        <div class="autoscroll_controller_right">set tempo<br>stop                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                                                                        <div class="t_dt">
+                            Contributor<br>                                                                                                                                                                    </div>
+                        <div class="t_dtd">
+                                                            <div class="t_dtde">
+                                    <a href="http://profile.ultimate-guitar.com/isthatmycow/" rel="nofollow">isthatmycow</a>
+                                </div>
+                                                                                                                                                                                                    </div>
+
+                        
+                        <div class="tb_ct">
+                            <div id="cont" >
+                                                                                                            <pre class="print-visible">+ --------------------------------------------------------------------- +
+| Ultimate Guitar Tabs Archive - your #1 source for tabs!               |
+| http://www.ultimate-guitar.com/                                       |
+|                                                                       |
+| Over 800,000 guitar, guitar pro and bass tabs! Also lessons, news,    |
+| columns and guitar forums!                                            |
++ --------------------------------------------------------------------- +
+</pre>
+                                        <pre class="js-tab-content"><i></i>IRON MAN by Black Sabbath
+Submitted by isthatmycow
+
+hey.......i already submitted this tab but i forgot to put my name on it, lol.......sorry for the confusion..here it is again
+
+|--------------------
+|--------------------
+|--------------------
+|--------------------
+|--------------------
+|-1b1/4--0-----------
+          I am Iron Man!!!!!
+repeat twice without words
+
+|------------------------------------------
+|------------------------------------------    
+|------------------------------------------   *this is the 
+|----7--7/9-9--12\11-12\11-12\11--7-7/9-9--     rhythm      
+|-9--5--5/7-7--10\9--10\9--10\9---5-5/7-7--
+|-7----------------------------------------
+repeat once
+
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|----5--5h7--7--10\9-10\9-10\9--5--5h7--7--
+|-7----------------------------------------
+ has he lost     can  he  see   or is  blind
+         his                        he
+          mind
+
+repeat throughout the verse
+
+rhythm once
+
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|----5--5h7--7--10\9-10\9-10\9--5--5h7--7--
+|-7----------------------------------------
+
+Is he live or dead? Has he thoughts within his head, ect.
+repeat throughout the verse
+
+* 1st riff
+|------------------------------------------------------
+|------------------------------------------------------
+|------------------------------------------------------
+|------------------------------------------------------
+|-----5-------------------------5----------------------
+|-7-7---7-6-5-5-5-0h4-5-5-6-7-7---7-6-5-5-5-0h4-5-5-6--
+
+*end of 1st riff
+|-----------------
+|-----------------
+|-----------------
+|-----------------
+|-----5-----------
+|-7-7---7-6-5-5-5-
+
+rhythm twice
+
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|----5--5h7--7--10\9-10\9-10\9--5--5h7--7--
+|-7----------------------------------------
+
+He was turned to steel in the great magnetic field, ect.
+
+*bridge
+|----------------------------------------------------
+|----------------------------------------------------
+|----------------------------------------------------
+|-9------------------7-------------------------------
+|-7------------------5-------------------------------
+|----------------------------------------------------
+   Nobody wants him    he just stares at the -
+
+|------------------------------------------------------
+|------------------------------------------------------
+|------------------------------------------------------
+|---------------------7-8-9----------------------7-8-9-
+|-9--9-------7--7-8-9--------9--9-------7--7-8-9-------
+|-7--7--7-10-----------------7--7--7-10----------------
+world
+
+repeat once -
+ Planning his vengance that he will soon unfurl
+
+rhythm twice
+
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|----5--5h7--7--10\9-10\9-10\9--5--5h7--7--
+|-7----------------------------------------
+
+Now the time is here for Iron Man to spread fear, ect.
+
+bridge - 
+Nobody wants him, they just turn their heads, ect.
+
+*lead*
+|---------------------------------------------
+|---------------------------------------------
+|---------------------------------------------
+|-11-9-------------------11-9-----------------
+|------11-10-9-7--------------11-10-9-7-------
+|----------------7-7/9-9----------------7-7h9-
+
+|----------------------------------------------------------
+|----------------------------------------------------------
+|----------------------------------9-9---------9-9---------
+|-------------------------9-9-9h11-----11p9--------11p9----
+|-----7h9-9p7----7h9-9/11-------------------11----------11-
+|-7h9---------9h-------------------------------------------
+
+|--------------9-------------------------------------------
+|-----------/9---12-9-----------------------9-12p9----9----
+|---------------------11-9-9-----------9h11--------11------
+|-9h11-11--------------------11-9-9h11---------------------
+|----------------------------------------------------------
+|----------------------------------------------------------
+
+|------------------------9--------/14-14-14-14p12----------
+|-12p9----9-12p9----9-12---12-9-9-----------------14h-14---
+|------11--------11----------------------------------------
+|----------------------------------------------------------
+|----------------------------------------------------------
+|----------------------------------------------------------
+
+|--------9-9-----------------------------------------------
+|-12-14------12p9-----9-12-12p9----------------------------
+|-----------------11h-----------11h-11p9-----9-9-----------
+|----------------------------------------11h-----11p9------
+|-----------------------------------------------------11---
+|----------------------------------------------------------
+
+|----------------------------------------------------------
+|----------------------------------------------------------
+|------9-9---------------9---------------------------------
+|-9h11-----11p9-----9h11---9-9h11-9h11-9h11-9h11-9h11-11---
+|---------------11h----------------------------------------
+|----------------------------------------------------------
+
+|----------------------------------------------------------
+|----------------------------------------------------------
+|----------------------------------------------------------
+|-9h11-9h11-9h11-9h11-9h11-11-11-9-----------------11-9----
+|----------------------------------11-10-9-7------------11-
+|--------------------------------------------7-7/9---------
+
+|--------------
+|--------------
+|--------------
+|--------------
+|-10-9-7-------
+|--------7-7/9-
+
+repeat 2nd 1/2 of bridge twice =
+|------------------------------------------------------
+|------------------------------------------------------
+|------------------------------------------------------
+|---------------------7-8-9----------------------7-8-9-
+|-9--9-------7--7-8-9--------9--9-------7--7-8-9-------
+|-7--7--7-10-----------------7--7--7-10----------------
+
+rhythm twice
+
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|------------------------------------------
+|----5--5h7--7--10\9-10\9-10\9--5--5h7--7--
+|-7----------------------------------------
+
+Heavy boots of lead, fills his victims full of dread, ect.
+
+1st riff
+
+extro......
+
+if you have any questions, email me at isthatmycow@hotmail.com</pre>
+                                        <div class="fb-meta">
+                                            <div id="fb-root"></div>
+                                            <div class="fb-like" data-href="https://tabs.ultimate-guitar.com/b/black_sabbath/iron_man_ver8_tab.htm" data-layout="standard" data-action="recommend" data-show-faces="true" data-share="false" data-height="30px" data-width="500px"></div>
+                                        </div>
+                                                                </div>
+                        </div>
+                        <div id="bottom_of_tab" style="clear: both"></div>
+                        
+                                                    <div class="adv_bottom">
+                                <script id="ad_cs_2010319_300_250">
+                                window.gpads.que.push({
+                                    cs: 'ad_cs_2010319_300_250',
+                                    p: 2010319, 
+                                    w: 300, 
+                                    h: 250, 
+                                    iwidth:610,
+                                    iheight:300,
+                                    amzn: '3x2',
+                                    q_str: '&promo_sizes=610x300&promo_alignment=center&song_name=iron+man&artist=1898'
+                                });
+                                </script>
+                            </div>
+                                                
+
+                    </div>
+
+                </div>
+                </div>
+                <div class="comment_box_h_main">
+                    <div class="comment_box_h">
+                        comments
+                    </div>
+                                        <div class="t_ft">
+                        <a id="print_link" class="pr_b" target="_blank" href="/print/21318" onclick="ga_track_event(['_trackEvent', 'Tab Page', 'Print link', 'Print link']);"><span></span>print</a> <span class="rt_b" target="_blank" onclick="ga_track_event(['_trackEvent', 'Tab Page', 'Report bad', 'Report Bad']);"><span></span>report bad tab</span>
+                    </div>
+                                    </div>
+                <div class="t_hs ">
+                                    </div>
+                <div class="cm_cnt">
+                    <div class="comments-block" id='comments'>
+                             <div class="tabcomms">
+    <div class="comments_total">
+        <span>5 comments total. Showing first comments. </span>
+            </div>
+    <div class="commentswr">
+                                <div id="c_1376469" class="comment tab-comment media com lev0 " data-rating="1"  data-id="1376469">
+                <span class="avatar_cap"><img src="https://cdn.ustatik.com/users/8/1/5/395518.gif?d=d"></span>
+                <div class="media-body">
+                    <div class="commhdr">
+                        <span class="commact">
+                            <span class="commvalue">
+                                <span class="cvote cant_vote" data='1376469'>
+                                    <a class="cplus"><b></b></a>
+                                    <a class="cminus"><b></b></a>
+                                </span>
+                                                                    <ins class="green2">+1</ins>
+                                                            </span>
+                            <a href="#" rel="1376469" class="commreply">reply</a>
+                            <span class="comtype_icon"></span>
+                            <span class="comsg _votecomment"></span>
+                        </span>
+                        <div><a href="http://profile.ultimate-guitar.com/speedmetal777/">speedmetal777</a> <span class="gray1">wrote on August 24 2006, 06:23 pm  </span></div>
+                    </div>
+                    <div class="comment_content">
+                        <p class="mtop5">this is pretty good but the intro is too overcomplicated you can use the whammy bar and bend it up or you can use the the string behind the nut</p>
+                    </div>
+                </div>
+            </div>
+                                <div id="c_1801980" class="comment tab-comment media com lev0 " data-rating="1"  data-id="1801980">
+                <span class="avatar_cap"><img src="https://cdn.ustatik.com/users/7/7/6/574677.gif?d=d"></span>
+                <div class="media-body">
+                    <div class="commhdr">
+                        <span class="commact">
+                            <span class="commvalue">
+                                <span class="cvote cant_vote" data='1801980'>
+                                    <a class="cplus"><b></b></a>
+                                    <a class="cminus"><b></b></a>
+                                </span>
+                                                                    <ins class="green2">+1</ins>
+                                                            </span>
+                            <a href="#" rel="1801980" class="commreply">reply</a>
+                            <span class="comtype_icon"></span>
+                            <span class="comsg _votecomment"></span>
+                        </span>
+                        <div><a href="http://profile.ultimate-guitar.com/Caligaris27/">Caligaris27</a> <span class="gray1">wrote on June 10 2007, 04:45 pm  </span></div>
+                    </div>
+                    <div class="comment_content">
+                        <p class="mtop5">its good but the solos not 100% right</p>
+                    </div>
+                </div>
+            </div>
+                                <div id="c_2500017" class="comment tab-comment media com lev0 " data-rating="1"  data-id="2500017">
+                <span class="avatar_cap"><img src="https://cdn.ustatik.com/users/8/2/3/911328.gif?d=d"></span>
+                <div class="media-body">
+                    <div class="commhdr">
+                        <span class="commact">
+                            <span class="commvalue">
+                                <span class="cvote cant_vote" data='2500017'>
+                                    <a class="cplus"><b></b></a>
+                                    <a class="cminus"><b></b></a>
+                                </span>
+                                                                    <ins class="green2">+1</ins>
+                                                            </span>
+                            <a href="#" rel="2500017" class="commreply">reply</a>
+                            <span class="comtype_icon"></span>
+                            <span class="comsg _votecomment"></span>
+                        </span>
+                        <div><a href="http://profile.ultimate-guitar.com/guitarman130/">guitarman130</a> <span class="gray1">wrote on June 16 2008, 05:53 pm  </span></div>
+                    </div>
+                    <div class="comment_content">
+                        <p class="mtop5">i am ice cream man runnin over fat kids wiht my van wen i ring my bell all the little fat kids run like hell lol nice tab man</p>
+                    </div>
+                </div>
+            </div>
+                            <div class="show_com_cont">
+                <div class="bgd_show_comments">
+                <button type="button" class="show_comments"/>View all 5 comments</button>
+                </div>
+            </div>
+            </div>
+</div><div class="comm-post js-comment-form-container">
+    <form id="comment_form" action="https://www.ultimate-guitar.com/user/tabComment/create" method="post">
+        <div class="t_hs"></div>
+        <button id="close_reply" class="close_reply"><b></b></button>
+        <span class="type_wraper">
+            <div class="smaltype_wraperlhdr">
+            <span class="comment_text">
+                I want to post
+            </span>
+            <span class="comment_chks">
+                <input name="cb_comment" type="checkbox" id="comment"> <label for="comment">comment</label>
+            </span>
+            <span class="comment_textor">
+                or
+            </span>
+            <span class="comment_chkscr">
+                <input name="cb_correction" type="checkbox" id="correction"> <label for="correction">correction</label>
+            </span>
+            <span class="comment_chkstab">
+                [tab]
+            </span>
+        </div>
+        </span>
+                    <div class="comment_avatarh"><span class="avatar_cap"><img src="https://cdn.ustatik.com/users/0/0/0/0.gif?d=d"></span><div class="gray1">guest</div></div>
+                <table class="tbl-comm-reply">
+            <tr>
+                <td class="comm-txt-subm">
+                    <div class="clearfix">
+                        <textarea name="content" id="comm_txt"></textarea>
+                        <div>
+                            <input type="submit" value="Submit" class="subm_comm">
+                                                            <div class="form_rate_box">
+                                    <div class="text_form_rate">You may want to rate the tab now too:</div>
+                                    <div class="rate_list_btn">
+                                        <div class="rate_btn_wrp">
+                                            <b></b>
+                                            <span>
+                                                select rating
+                                            </span>
+                                        </div>
+                                        <div class="rate_list_drop">
+                                                                                            <a class="rld_5" href="#" data="comment" data-rate="5"><b></b><b></b><b></b><b></b><b></b></a>
+                                                                                            <a class="rld_4" href="#" data="comment" data-rate="4"><b></b><b></b><b></b><b></b></a>
+                                                                                            <a class="rld_3" href="#" data="comment" data-rate="3"><b></b><b></b><b></b></a>
+                                                                                            <a class="rld_2" href="#" data="comment" data-rate="2"><b></b><b></b></a>
+                                                                                            <a class="rld_1" href="#" data="comment" data-rate="1"><b></b></a>
+                                                                                    </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </td>
+                <td valign="top">
+                    <div class="clearfix_info">
+                                                <span class="comm_infocor"><div></div>Please do not post tabs as comments. Select &quot;correction&quot; instead!</span>
+                        <span id="com_msg" class="dn"></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <input type='hidden' name='type' value='4' id="comment_form_type">
+        <input type='hidden' name='ajax_form' value='1'>
+        <input id="form_parent_id" type='hidden' name='parent_id' value='0'>
+        <input type='hidden' name='rowid' value='21318'>
+    </form>
+</div>                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript" src="//cdn.ustatik.com/js/jquery/jquery.min_ver2.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.ustatik.com/js/jquery/jquery-ui.min_ver2.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.ustatik.com/js/jquery/jquery.cookie_ver2.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.ustatik.com/js/stickyfill_ver2741545334.js" crossorigin="anonymous"></script>
+
+
+
+
+<script>
+    var SplashParams = {"is_splash_user":false,"ga_tracker":null,"GA_events":[],"YM_events_map":[],"cookie_domain":"ultimate-guitar.com","cookie_big_splash_shown":"show_ugt_splash","cookie_inter_allowed":"inter_al","page_type":"tab","device_type":null,"AB_value":null,"trackingOptions":{"mobile":6},"counters":{"big":{"cookie_count_name":"was_bs_shown3","max_splash_count":5}},"counters_ttl":360,"tab_buttons":[],"tab_links":[]};
+    SplashParams.items = {};
+
+    </script>
+
+
+
+    <script type="text/javascript">
+        var current_rating       = 3.95035;
+        var current_rating_count = 9;
+        var tabid                = 21318;
+        var ug_serv              = ".ultimate-guitar.com";
+        var tabs_user_id         = 9109;
+        var transpose_to         = 0;
+        var has_ad_free          = '0';
+        var tab_info             = {
+            'name': 'iron man',
+            'version': 8,
+            'type': 'Tabs'
+        };
+
+        
+                    var ga_preffix = 'Text tabs ';
+            $('.etp_banner .close_etp').click(function(){
+                $(this).parents('.etp_banner').css('height', 0).removeClass('open');
+                return false;
+            });
+
+            $('.etp_banner .buybtn').click(function(){
+                $('.etp_banner').css('height', 0).removeClass('open');
+            });
+
+                    
+        
+        (function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=539490962762175";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+        if ($.cookie("search_query_hash")){
+
+            var query_hash = $.cookie("search_query_hash");
+
+            setTimeout(function(){
+                (new Image()).src='https://track.ultimate-guitar.com/tab_found.trc?tid='+tabid+'&cid=' + ga_client_id + '&t=60000&q=' + query_hash;
+            }, 60000);
+        }
+
+    </script>
+
+    <script src="//cdn.ustatik.com/js/jinba/dist/Jinba.Client.min_ver2741545334.js" crossorigin="anonymous"></script>
+<script>
+    Jinba.config({
+        url:'https://track.ultimate-guitar.com/jinba.trc',
+        batchTimeout: 1000
+    });
+    var TAG_WEBSITE = {
+        app_label: 'tab_page'
+    };
+    window.addEventListener('DOMContentLoaded', function() {
+        var jinbaRequest = new Jinba.Request(location.pathname, TAG_WEBSITE);
+        Jinba.MeasureNetworkTiming(jinbaRequest);
+
+        jinbaRequest.end();
+    });
+</script>
+        <script type="text/javascript" src="//cdn.ustatik.com/js/tabs_page_ver2741545334.js" crossorigin="anonymous"></script>
+                <div class="footer_wrp">
+                                        <!--FOOTER-->
+<div class="headtbl bord_lr_3" align=center>
+    <table cellspacing="0" cellpadding="0" class="b foot bdrunion">
+        <tr>
+            <td width="100%" height="35" class="bg2union" style="font-size:10px">
+                <b>
+                    <div class="pull-right ug-footer--social">
+                        <a
+                            href="//www.facebook.com/UltimateGuitar"
+                            target="_blank"
+                            class="ug-social-btn ug-social-btn__fb js-track-metrica-click"
+                            data-metrica-click="CLICK_SOCIAL_FACEBOOK"
+                        ></a>
+                        <a
+                            href="//twitter.com/ultimateguitar"
+                            target="_blank"
+                            class="ug-social-btn ug-social-btn__twitter js-track-metrica-click"
+                            data-metrica-click="CLICK_SOCIAL_TWITTER"
+                        ></a>
+                        <a
+                            href="//www.instagram.com/ultimateguitar/"
+                            target="_blank"
+                            class="ug-social-btn ug-social-btn__instagram js-track-metrica-click"
+                            data-metrica-click="CLICK_SOCIAL_INSTAGRAM"
+                        ></a>
+                    </div>
+                    <span class="ug-footer--copy pull-right">&copy; 2016 Ultimate-Guitar.com. All rights reserved&nbsp;&nbsp;</span>&nbsp;&nbsp;
+                    <a href="https://www.ultimate-guitar.com/about/" class="ws1">About</a> |
+                    <a href="https://www.ultimate-guitar.com/article/blog" class="ws1">Blog</a> |
+                    <a href="https://www.ultimate-guitar.com/about/tos.htm" class="ws1">TOS</a> |
+                    <a href="https://www.ultimate-guitar.com/about/privacy.htm" class="ws1">Privacy</a> |
+                    <a href="https://www.ultimate-guitar.com/about/advertise.htm" class="ws1"><span style="color:#FFC600">Advertise</span></a> |
+                    <a href="https://www.ultimate-guitar.com/components/support/auth/redirect" class="ws1">Support</a>
+                                    </b>
+            </td>
+        </tr>
+    </table>
+    <!--/FOOTER-->
+</div>
+
+
+
+    <script src="//cdn.ustatik.com/js/sms_app_ver2741545334.js" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+    var artist_id = 1898;
+    var name_art = 'Black Sabbath';
+
+    var main_server_name = 'ultimate-guitar.com';
+    var ps_serv = 'http://plus.ultimate-guitar.com';
+</script>
+
+
+    <script type="text/javascript">
+
+// GA start
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-9160560-1', 'auto');
+
+
+
+ga('set', 'dimension5', 'https');
+
+var ga_client_id = null;
+
+ga(function(tracker) {
+    ga_client_id = tracker.get('clientId');
+    ga('set', 'dimension4', ga_client_id);
+
+    });
+
+ga('send', 'pageview');
+// GA end
+
+// Yandex.Metrika counter
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter18746557 = new Ya.Metrika({id:18746557,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+// Yandex.Metrika counter end
+
+</script>
+
+<!-- Yandex.Metrika counter -->
+<noscript><div><img src="//mc.yandex.ru/watch/18746557" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<noscript><div><img src="//www.ultimate-guitar.com/app_event/?NO_SCRIPT" style="position:absolute; left:-9998px;" alt="" /></div></noscript>
+
+<script type="text/javascript" src="//cdn.ustatik.com/js/ug_scripts_ver2741545334.js" crossorigin="anonymous"></script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
