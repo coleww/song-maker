@@ -38,8 +38,6 @@ function replaceNotes (section) {
   }).reverse()
 }
 
-
-
 function getKey (section) {
   var notes = section.map(function (row) {
     return row.filter(function (e) {return e}).map(function (note) {
@@ -93,10 +91,6 @@ function convertNotesToIndices (notes, beats, rootNote) {
   }, fill(Array(beats), []))
 }
 
-
-// function convertNotesToMidi (notes, divisor, key) {
-//   // eh, wouldn't be toooooo hard to do this....
-// }
 
 module.exports = {
   getSections: getSections,
