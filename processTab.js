@@ -1,7 +1,11 @@
 module.exports = function (tabData) {
   // gosh, this is probably gonna be a total mess, huh?
-  tabData.split(/\n/)
+  var lines = tabData.split(/\n/)
+  var sections = []
 
+
+
+  return sections
 
   // find sections of 4 or 6 lines in a row filled with '-'
   // grab them lines, process them by the index in a row.
@@ -12,10 +16,17 @@ module.exports = function (tabData) {
 }
 
 
+// e|----------
+// B|----------
+// G|----------
+// D|--3--3--3-
+// A|--3--3--3-
+// E|--1--1--1-
 
-// e|----------xxxx--------0----------xxxx--------0-----------|
-// B|----------xxxx--3--3--0----------xxxx--------0-----------|
-// G|----------xxxx--3--3--0----------xxxx--6--6--0-----------|
-// D|--3--3--3-xxxx--3--3--0--6--6--6-xxxx--6--6--0-----------|
-// A|--3--3--3-xxxx--1--1--0--6--6--6-xxxx--4--4--0-----------|
-// E|--1--1--1-xxxx--------0--4--4--4-xxxx--------0-----------|
+var sickPowerChords = [
+  ['', '', '', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', '', '', ''],
+  ['', '', '', '', '', '', '', '', '', ''],
+  ['', '', 'f', '', '', 'f', '', '', 'f', ''],
+  ['', '', 'c', '', '', 'c', '', '', 'c', ''],
+  ['', '', 'f', '', '', 'f', '', '', 'f', '']]
