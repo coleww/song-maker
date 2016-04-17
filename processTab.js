@@ -12,8 +12,10 @@ function getSections (tabData) {
   var sections = []
   var current = []
   lines.forEach(function (line) {
-    // this regex is...probably good enough
-    if (line.match(/\w+-+\w+-+\w+-+/)) {
+    //
+    // regex from: http://knowles.co.za/parsing-guitar-tab/
+    var patt = /([A-Ga-g]{0,1}[#b]{0,1})[\|\]]([\-0-9\|\/\^\(\)\\hbpv]+)/;
+    if (line.match(patt)) {
       current.push(line)
       if (current.length == 6) {
         sections.push(current)
@@ -57,12 +59,14 @@ function getMiddle (section) {
 }
 
 function getRootNoteNumber (middle, target) {
+  console.log('getRoot', middle, target)
   if (midinote(middle).replace(/\d+/, '') == target) {
     return middle
   } else {
     var i = 1
     var theRoot
-    while (i < 12) {
+    while (i <= 12) {
+      console.log(midinote(middle + i), midinote(middle - i))
       if (midinote(middle + i).replace(/\d+/, '') == target) {
         theRoot = middle + i
         break;
@@ -71,6 +75,7 @@ function getRootNoteNumber (middle, target) {
         break;
       } else {
         i++
+        console.log(i)
       }
     }
     return theRoot
@@ -80,6 +85,7 @@ function convertNotesToIndices (notes, beats, rootNote) {
   // converts guitar strings worth of notes into indexes and stuff
   var divisor = ~~(notes[0].length / beats)
   var root = midinote(rootNote)
+  console.log(root)
   // ... maybe, get the scale?
   return notes.map(function (row) {
     return chunk(row, divisor).map(function (part) {
@@ -100,9 +106,17 @@ function convertNotesToIndices (notes, beats, rootNote) {
 }
 
 function processTab (tab, beats) {
-  var notes = replaceNotes(getSections(tab))
+  // console.log(tab)
+  console.log(getSections(tab))
+  var notes = getSections(tab).map(function (section) {
+    console.log(section)
+    return replaceNotes(section)
+  })
   // something borked here
-  var root = getRootNoteNumber(getMiddle(notes), getKey(notes))
+  console.log(notes)
+  var allTheNotes = notes.reduce(function (a, b) {return a.concat(b)}, [])
+  console.log(root)
+  var root = getRootNoteNumber(getMiddle(allTheNotes), getKey(allTheNotes).replace(/\s\w+/, ''))
   return notes.map(function (section) {
     return convertNotesToIndices(section, beats, root)
   })

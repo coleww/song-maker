@@ -3,7 +3,7 @@ var processor = require('./processTab')
 var fs =  require ('fs')
 var tab = fs.readFileSync('./sampleTab.txt').toString()
 
-tap.equal(24, processor.getSections(tab).length)
+tap.equal(37, processor.getSections(tab).length)
 var sectionTab = [
   'e|---------------0---------|',
   'B|-----3------3--0---------|',
