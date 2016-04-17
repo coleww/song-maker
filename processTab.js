@@ -59,14 +59,14 @@ function getMiddle (section) {
 }
 
 function getRootNoteNumber (middle, target) {
-  console.log('getRoot', middle, target)
+  // console.log('getRoot', middle, target)
   if (midinote(middle).replace(/\d+/, '') == target) {
     return middle
   } else {
     var i = 1
     var theRoot
     while (i <= 12) {
-      console.log(midinote(middle + i), midinote(middle - i))
+      // console.log(midinote(middle + i), midinote(middle - i))
       if (midinote(middle + i).replace(/\d+/, '') == target) {
         theRoot = middle + i
         break;
@@ -75,7 +75,7 @@ function getRootNoteNumber (middle, target) {
         break;
       } else {
         i++
-        console.log(i)
+        // console.log(i)
       }
     }
     return theRoot
@@ -85,7 +85,7 @@ function convertNotesToIndices (notes, beats, rootNote) {
   // converts guitar strings worth of notes into indexes and stuff
   var divisor = ~~(notes[0].length / beats)
   var root = midinote(rootNote)
-  console.log(root)
+  // console.log(root)
   // ... maybe, get the scale?
   return notes.map(function (row) {
     return chunk(row, divisor).map(function (part) {
@@ -94,7 +94,7 @@ function convertNotesToIndices (notes, beats, rootNote) {
         var multiplier = note > rootNote ? 1 : -1
         var octaved = Math.abs(note - rootNote) >= 12 ? 7 : 1
         var diff = Math.abs(midinote(note).charCodeAt(0) - root.charCodeAt(0))
-
+        if (typeof (diff * multiplier * octaved) !== 'number') console.log(multiplier, octaved, diff, note, root, midinote(note))
         return diff * multiplier * octaved
       })
     })
@@ -107,15 +107,15 @@ function convertNotesToIndices (notes, beats, rootNote) {
 
 function processTab (tab, beats) {
   // console.log(tab)
-  console.log(getSections(tab))
+  // console.log(getSections(tab))
   var notes = getSections(tab).map(function (section) {
-    console.log(section)
+    // console.log(section)
     return replaceNotes(section)
   })
   // something borked here
-  console.log(notes)
+  // console.log(notes)
   var allTheNotes = notes.reduce(function (a, b) {return a.concat(b)}, [])
-  console.log(root)
+  // console.log(root)
   var root = getRootNoteNumber(getMiddle(allTheNotes), getKey(allTheNotes).replace(/\s\w+/, ''))
   return notes.map(function (section) {
     return convertNotesToIndices(section, beats, root)
