@@ -1,4 +1,4 @@
-var bandName = 'aphex twin'
+var bandName = 'pokemon'
 
 var x = require('./fetcher')
 

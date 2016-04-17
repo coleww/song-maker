@@ -47,7 +47,7 @@ function getKey (section) {
   var accidentals = uniq(flatten(notes)).map(function (note) {
     return note.replace(/^\w/, '')
   }).filter(function (e) {return e})
-  console.log(key(accidentals.join('')))
+  // console.log(key(accidentals.join('')))
   return key(accidentals.join(''))
 }
 
@@ -79,16 +79,17 @@ function getRootNoteNumber (middle, target) {
 function convertNotesToIndices (notes, beats, rootNote) {
   // converts guitar strings worth of notes into indexes and stuff
   var divisor = ~~(notes[0].length / beats)
-  var root = midinote(rootNote).replace(/\d+/, '')
+  var root = midinote(rootNote)
   // ... maybe, get the scale?
   return notes.map(function (row) {
     return chunk(row, divisor).map(function (part) {
       return part.filter(function (n) {return n}).map(function (note) {
-        midinote(note)
-        var posi = note > rootNote
 
-// BAH HOW TO DO THIS HERE WAHAHAHAHAHAHA
-        return  // HERE, this is semitones, not key indices :<
+        var multiplier = note > rootNote ? 1 : -1
+        var octaved = Math.abs(note - rootNote) >= 12 ? 7 : 1
+        var diff = Math.abs(midinote(note).charCodeAt(0) - root.charCodeAt(0))
+
+        return diff * multiplier * octaved
       })
     })
   }).reduce(function (result, row) {
