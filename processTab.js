@@ -12,10 +12,11 @@ function getSections (tabData) {
   var sections = []
   var current = []
   lines.forEach(function (line) {
-    //
+    console.log(line)
     // regex from: http://knowles.co.za/parsing-guitar-tab/
-    var patt = /([A-Ga-g]{0,1}[#b]{0,1})[\|\]]([\-0-9\|\/\^\(\)\\hbpv]+)/;
+    var patt = /([A-Ga-g]{0,1}[#b]{0,1})[\|\]]{0,1}([\-0-9\|\/\^\(\)\\hbpv]+)/;
     if (line.match(patt)) {
+      console.log(line)
       current.push(line)
       if (current.length == 6) {
         sections.push(current)
@@ -26,6 +27,7 @@ function getSections (tabData) {
       current = []
     }
   })
+  console.log(sections)
   return sections
 }
 
@@ -46,21 +48,24 @@ function getKey (section) {
       return midinote(note).replace(/\d+$/g, '')
     })
   })
+  console.log('notes',notes)
   var accidentals = uniq(flatten(notes)).map(function (note) {
     return note.replace(/^\w/, '')
   }).filter(function (e) {return e})
   // console.log(key(accidentals.join('')))
-  return key(accidentals.join(''))
+  return key(accidentals.join('')) || "C"
 }
 
 function getMiddle (section) {
   var allTheNotesAllLinedUp = uniq(flatten(section).filter(function (e) {return e})).sort()
+  console.log('allthem', allTheNotesAllLinedUp)
   return allTheNotesAllLinedUp[~~(allTheNotesAllLinedUp.length / 2)]
 }
 
 function getRootNoteNumber (middle, target) {
-  // console.log('getRoot', middle, target)
-  if (midinote(middle).replace(/\d+/, '') == target) {
+  console.log('getRoot', middle, target)
+  console.log(midinote(middle))
+  if (midinote(middle) && midinote(middle).replace(/\d+/, '') == target) {
     return middle
   } else {
     var i = 1
@@ -116,6 +121,7 @@ function processTab (tab, beats) {
   // console.log(notes)
   var allTheNotes = notes.reduce(function (a, b) {return a.concat(b)}, [])
   // console.log(root)
+  console.log(getKey(allTheNotes))
   var root = getRootNoteNumber(getMiddle(allTheNotes), getKey(allTheNotes).replace(/\s\w+/, ''))
   return notes.map(function (section) {
     return convertNotesToIndices(section, beats, root)

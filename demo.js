@@ -6,6 +6,10 @@ var ac = new AudioContext()
   mainVolume.connect(ac.destination)
   mainVolume.gain.setValueAtTime(0.5, ac.currentTime)
 var synths = {
+      snare: require("dj-snazzy-snare")(ac),
+    tom: require("tom-from-space")(ac),
+    kick: require("touch-down-dance")(ac),
+    hat: require("really-hi-hat")(ac),
   bb: require("pie-ano")(ac),
   pp: require("pie-ano")(ac),
   sm: require("sparkle-motion")(ac),
@@ -21,7 +25,7 @@ require('openmusic-slider').register('openmusic-slider');
 
 Object.keys(synths).forEach(function(ik) {
       synths[ik].connect(mainVolume)
-      var the_nodes = synths[ik].nodes()
+      // var the_nodes = synths[ik].nodes()
 
       // var container = document.createElement('div')
       // container.style.display = 'inline-block'
@@ -69,16 +73,18 @@ document.body.addEventListener('paste', function(e){
 
       Object.keys(song.instruments).forEach(function (i) {
         // console.log(i)
-        song.instruments[i].patterns.verse.notes = pick(stuff, {count: ration})
-        var max = song.instruments[i].patterns.verse.notes.length
-        song.instruments[i].patterns.verse.nexts = song.instruments[i].patterns.verse.notes.map(function (ehwhatever, eh) {
-          return [~~(Math.random * max), eh, ~~(Math.random * max)]
-        })
-        song.instruments[i].patterns.verse.probs = song.instruments[i].patterns.verse.notes.map(function (pattern) {
-          return pattern.map(function (step) {
-            return step.length ? (Math.random() * 0.25) + 0.5 : 0
+        if (song.instruments[i].melodic) {
+          song.instruments[i].patterns.verse.notes = pick(stuff, {count: ration})
+          var max = song.instruments[i].patterns.verse.notes.length
+          song.instruments[i].patterns.verse.nexts = song.instruments[i].patterns.verse.notes.map(function (ehwhatever, eh) {
+            return [~~(Math.random * max), eh, ~~(Math.random * max)]
           })
-        })
+          song.instruments[i].patterns.verse.probs = song.instruments[i].patterns.verse.notes.map(function (pattern) {
+            return pattern.map(function (step) {
+              return step.length ? (Math.random() * 0.25) + 0.5 : 0
+            })
+          })
+        }
         song.instruments[i].play = function (arg) {
           // console.log(i)
           // console.log(song.key)
@@ -142,7 +148,7 @@ document.body.appendChild(coolSlider);
 coolSlider.addEventListener('change', function (ev) {
   console.log(ev)
   console.log('whoa')
-  song.bpm = ~~ev.target.value
+  song.bpm = ~~ev.target.value * 2
   sq.stop()
   sq.updateSong(song)
   sq.start()
