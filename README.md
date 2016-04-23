@@ -1,7 +1,12 @@
 SONGMAKER
 -------------------
 
+set multi/mod/bpm/key at random on startup
 
-given the name of a band, songmaker will download some tablature from the internet and interpret it for you into a bizarre proprietary musical notation format that I invented for use in my private dubstep generator. deal with it.
+UI/UX:
 
+ADSR/vol on the synths? eh
+(oh will web-audio-ui work here?)
 
+BPM, key
+multi and mod on every thing

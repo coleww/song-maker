@@ -1,0 +1,102 @@
+{
+  instruments: {
+    pp: {
+      config: {
+        attack: 0.13,
+        decay: 0.1,
+        sustain: 0.3,
+        release: 0.25,
+        peak: 0.345,
+        mid: 0.23,
+        end: 0.051},
+      lead: true,
+      melodic: true,
+      multi: 1,
+      patterns: {
+        verse: {
+          notes: [],
+          probs: [],
+          currentVersion: 0,
+          currentTick: 0,
+          mod: 1,
+          nexts: []
+        }
+      }
+    },
+    bb: {
+      config: {
+        attack: 0.03,
+        decay: 0.1,
+        sustain: 0.13,
+        release: 0.35,
+        peak: 0.1345,
+        mid: 0.23,
+        end: 0.051},
+      melodic: true,
+      multi: 2,
+      patterns: {
+        verse: {
+          notes: [],
+          probs: [],
+          currentVersion: 0,
+          currentTick: 0,
+          mod: 2,
+          nexts: []
+        }
+      }
+    },
+    sm: {
+      config: {
+        attack: 0.03,
+        decay: 0.1,
+        sustain: 0.3,
+        release: 0.15,
+        peak: 0.345,
+        mid: 0.23,
+        end: 0.051},
+      multi: -2,
+      melodic: true,
+      patterns: {
+        verse: {
+          notes: [],
+          probs: [],
+          currentVersion: 0,
+          currentTick: 0,
+          mod: 1,
+          nexts: []
+        }
+      }
+    },
+    wb: {
+      config: {
+        attack: 0.123,
+        decay: 0.1,
+        sustain: 0.13,
+        release: 0.25,
+        peak: 0.345,
+        mid: 0.23,
+        end: 0.051},
+      multi: 2,
+      melodic: true,
+      patterns: {
+        verse: {
+          notes: [],
+          probs: [],
+          currentVersion: 0,
+          currentTick: 0,
+          mod: 2,
+          nexts: []
+        }
+      }
+    }
+  },
+  current: "verse",
+  nexts: {
+    verse: ["verse"]
+  },
+  bpm: 320,
+  key: {
+    tonic: "D3",
+    scale: "major"
+  }
+}
