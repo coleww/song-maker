@@ -27,6 +27,7 @@
   "devDependencies": {
     "browserify": "^13.0.0",
     "dj-snazzy-snare": "^1.0.0",
+    "document-register-element": "^0.5.4",
     "int2freq": "^1.0.1",
     "merge": "^1.2.0",
     "openmusic-slider": "^2.1.0",

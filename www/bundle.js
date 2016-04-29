@@ -1,6 +1,6 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-var proc=require("./processtab");window.AudioContext=window.AudioContext||window.webkitAudioContext;var ac=new AudioContext,pie=require("pie-ano"),mainVolume=ac.createGain();mainVolume.connect(ac.destination),mainVolume.gain.setValueAtTime(.5,ac.currentTime);var synths={snare:require("dj-snazzy-snare")(ac),kick:require("touch-down-dance")(ac),hat:require("really-hi-hat")(ac),bb:pie(ac),pp:pie(ac),sm:pie(ac)};require("scale-select").register("scale-select"),require("openmusic-slider").register("openmusic-slider"),Object.keys(synths).forEach(function(e){synths[e].connect(mainVolume)});var seq=require("spiderbite"),the_song=require("./demoSong"),pick=require("pick-random"),merge=require("merge"),int2freq=require("int2freq"),sq,the_ui;document.body.addEventListener("paste",function(e){if(sq)sq.stop(),the_ui.remove();else{document.getElementById("notes").remove();var t=document.createElement("div");t.innerHTML='<iframe width="100%" height="100%" class="super-center"  src="https://www.youtube.com/embed/O2ulyJuvU3Q?autoplay=1" frameborder="0" allowfullscreen></iframe>',document.body.appendChild(t)}var n=JSON.parse(JSON.stringify(the_song)),r=e.clipboardData.getData("text/plain");try{var s=proc.processTab(r,8);if(console.log(s),s.length){var a=Math.ceil(s.length/3);Object.keys(n.instruments).forEach(function(e){if(n.instruments[e].melodic){n.instruments[e].patterns.verse.notes=pick(s,{count:a});var t=n.instruments[e].patterns.verse.notes.length;n.instruments[e].patterns.verse.nexts=n.instruments[e].patterns.verse.notes.map(function(e,n){return[~~(Math.random*t),n,~~(Math.random*t)]}),n.instruments[e].patterns.verse.probs=n.instruments[e].patterns.verse.notes.map(function(e){return e.map(function(e){return e.length?.25*Math.random()+.5:0})})}n.instruments[e].play=function(t){var r=n.instruments[e].config||{},s=n.instruments[e].multi||1,a=n.instruments[e].melodic?{freq:int2freq(t,n.key)*s}:{};synths[e].update(merge(a,r),ac.currentTime),synths[e].start(ac.currentTime)}}),the_ui=document.createElement("div"),the_ui.id="main",the_ui.className="super-simple layover",sq=seq(n),console.log(sq);var i=document.createElement("h4");i.textContent="ROCK ON, KEYBOARD CAT!",the_ui.appendChild(i);var o=document.createElement("scale-select");the_ui.appendChild(o),o.addEventListener("tonic",function(e){var t=e.detail.value;n.key.tonic=t+3,sq.updateSong(n)}),o.addEventListener("scale",function(e){var t=e.detail.value;n.key.scale=t,console.log(sq),sq.updateSong(n)});var c=document.createElement("openmusic-slider");c.min=100,c.max=300,console.log(c),c.value=320,the_ui.appendChild(c),c.addEventListener("change",function(e){console.log(e),console.log("whoa"),n.bpm=2*~~e.target.value,sq.stop(),sq.updateSong(n),sq.start()}),document.body.appendChild(the_ui),sq.start()}else console.log("NOTHING THERE?")}catch(e){console.log(e),alert("very sorry, something broke, not to worry, refresh the page and perhaps another guitar or bass tab will work better?")}});
-},{"./demoSong":2,"./processtab":44,"dj-snazzy-snare":4,"int2freq":5,"merge":16,"openmusic-slider":35,"pick-random":36,"pie-ano":37,"really-hi-hat":38,"scale-select":40,"spiderbite":42,"touch-down-dance":43}],2:[function(require,module,exports){
+function doit(e){if(sq)sq.stop(),the_ui.remove();else{document.getElementById("notes").remove();var t=document.createElement("div");t.innerHTML='<iframe width="100%" height="100%" class="super-center"  src="https://www.youtube.com/embed/O2ulyJuvU3Q?autoplay=1" frameborder="0" allowfullscreen></iframe>',document.body.appendChild(t)}var n=JSON.parse(JSON.stringify(the_song)),r=e.clipboardData.getData("text/plain");try{var s=proc.processTab(r,8);if(console.log(s),s.length){var a=Math.ceil(s.length/3);Object.keys(n.instruments).forEach(function(e){if(n.instruments[e].melodic){n.instruments[e].patterns.verse.notes=pick(s,{count:a});var t=n.instruments[e].patterns.verse.notes.length;n.instruments[e].patterns.verse.nexts=n.instruments[e].patterns.verse.notes.map(function(e,n){return[~~(Math.random*t),n,~~(Math.random*t)]}),n.instruments[e].patterns.verse.probs=n.instruments[e].patterns.verse.notes.map(function(e){return e.map(function(e){return e.length?.25*Math.random()+.5:0})})}n.instruments[e].play=function(t){var r=n.instruments[e].config||{},s=n.instruments[e].multi||1,a=n.instruments[e].melodic?{freq:int2freq(t,n.key)*s}:{};synths[e].update(merge(a,r),ac.currentTime),synths[e].start(ac.currentTime)}}),the_ui=document.createElement("div"),the_ui.id="main",the_ui.className="super-simple layover",sq=seq(n),console.log(sq);var i=document.createElement("h4");i.textContent="ROCK ON, KEYBOARD CAT!",the_ui.appendChild(i);var o=document.createElement("scale-select");the_ui.appendChild(o),o.addEventListener("tonic",function(e){var t=e.detail.value;n.key.tonic=t+3,sq.updateSong(n)}),o.addEventListener("scale",function(e){var t=e.detail.value;n.key.scale=t,console.log(sq),sq.updateSong(n)});var c=document.createElement("openmusic-slider");c.min=100,c.max=300,console.log(c),c.value=320,the_ui.appendChild(c),c.addEventListener("change",function(e){console.log(e),console.log("whoa"),n.bpm=2*~~e.target.value,sq.stop(),sq.updateSong(n),sq.start()}),document.body.appendChild(the_ui),sq.start()}else console.log("NOTHING THERE?")}catch(e){console.log(e),alert("very sorry, something broke, not to worry, refresh the page and perhaps another guitar or bass tab will work better?")}}var proc=require("./processtab");window.AudioContext=window.AudioContext||window.webkitAudioContext;var ac=new AudioContext,pie=require("pie-ano"),mainVolume=ac.createGain();mainVolume.connect(ac.destination),mainVolume.gain.setValueAtTime(.5,ac.currentTime);var synths={snare:require("dj-snazzy-snare")(ac),kick:require("touch-down-dance")(ac),hat:require("really-hi-hat")(ac),bb:pie(ac),pp:pie(ac),sm:pie(ac)};require("document-register-element"),require("scale-select").register("scale-select"),require("openmusic-slider").register("openmusic-slider"),Object.keys(synths).forEach(function(e){synths[e].connect(mainVolume)});var seq=require("spiderbite"),the_song=require("./demoSong"),pick=require("pick-random"),merge=require("merge"),int2freq=require("int2freq"),sq,the_ui;document.body.addEventListener("paste",doit),document.getElementById("theinput").addEventListener("paste",doit);
+},{"./demoSong":2,"./processtab":45,"dj-snazzy-snare":4,"document-register-element":5,"int2freq":6,"merge":17,"openmusic-slider":36,"pick-random":37,"pie-ano":38,"really-hi-hat":39,"scale-select":41,"spiderbite":43,"touch-down-dance":44}],2:[function(require,module,exports){
 module.exports={
   instruments: {
         kick: {
@@ -310,7 +310,10 @@ function makeADSR (type, settings) {
   }, {})
 }
 
-},{"a-d-s-r":3,"make-distortion-curve":15}],5:[function(require,module,exports){
+},{"a-d-s-r":3,"make-distortion-curve":16}],5:[function(require,module,exports){
+/*! (C) WebReflection Mit Style License */
+(function(e,t,n,r){"use strict";function rt(e,t){for(var n=0,r=e.length;n<r;n++)vt(e[n],t)}function it(e){for(var t=0,n=e.length,r;t<n;t++)r=e[t],nt(r,b[ot(r)])}function st(e){return function(t){j(t)&&(vt(t,e),rt(t.querySelectorAll(w),e))}}function ot(e){var t=e.getAttribute("is"),n=e.nodeName.toUpperCase(),r=S.call(y,t?v+t.toUpperCase():d+n);return t&&-1<r&&!ut(n,t)?-1:r}function ut(e,t){return-1<w.indexOf(e+'[is="'+t+'"]')}function at(e){var t=e.currentTarget,n=e.attrChange,r=e.attrName,i=e.target;Q&&(!i||i===t)&&t.attributeChangedCallback&&r!=="style"&&e.prevValue!==e.newValue&&t.attributeChangedCallback(r,n===e[a]?null:e.prevValue,n===e[l]?null:e.newValue)}function ft(e){var t=st(e);return function(e){X.push(t,e.target)}}function lt(e){K&&(K=!1,e.currentTarget.removeEventListener(h,lt)),rt((e.target||t).querySelectorAll(w),e.detail===o?o:s),B&&pt()}function ct(e,t){var n=this;q.call(n,e,t),G.call(n,{target:n})}function ht(e,t){D(e,t),et?et.observe(e,z):(J&&(e.setAttribute=ct,e[i]=Z(e),e.addEventListener(p,G)),e.addEventListener(c,at)),e.createdCallback&&Q&&(e.created=!0,e.createdCallback(),e.created=!1)}function pt(){for(var e,t=0,n=F.length;t<n;t++)e=F[t],E.contains(e)||(n--,F.splice(t--,1),vt(e,o))}function dt(e){throw new Error("A "+e+" type is already registered")}function vt(e,t){var n,r=ot(e);-1<r&&(tt(e,b[r]),r=0,t===s&&!e[s]?(e[o]=!1,e[s]=!0,r=1,B&&S.call(F,e)<0&&F.push(e)):t===o&&!e[o]&&(e[s]=!1,e[o]=!0,r=1),r&&(n=e[t+"Callback"])&&n.call(e))}if(r in t)return;var i="__"+r+(Math.random()*1e5>>0),s="attached",o="detached",u="extends",a="ADDITION",f="MODIFICATION",l="REMOVAL",c="DOMAttrModified",h="DOMContentLoaded",p="DOMSubtreeModified",d="<",v="=",m=/^[A-Z][A-Z0-9]*(?:-[A-Z0-9]+)+$/,g=["ANNOTATION-XML","COLOR-PROFILE","FONT-FACE","FONT-FACE-SRC","FONT-FACE-URI","FONT-FACE-FORMAT","FONT-FACE-NAME","MISSING-GLYPH"],y=[],b=[],w="",E=t.documentElement,S=y.indexOf||function(e){for(var t=this.length;t--&&this[t]!==e;);return t},x=n.prototype,T=x.hasOwnProperty,N=x.isPrototypeOf,C=n.defineProperty,k=n.getOwnPropertyDescriptor,L=n.getOwnPropertyNames,A=n.getPrototypeOf,O=n.setPrototypeOf,M=!!n.__proto__,_=n.create||function mt(e){return e?(mt.prototype=e,new mt):this},D=O||(M?function(e,t){return e.__proto__=t,e}:L&&k?function(){function e(e,t){for(var n,r=L(t),i=0,s=r.length;i<s;i++)n=r[i],T.call(e,n)||C(e,n,k(t,n))}return function(t,n){do e(t,n);while((n=A(n))&&!N.call(n,t));return t}}():function(e,t){for(var n in t)e[n]=t[n];return e}),P=e.MutationObserver||e.WebKitMutationObserver,H=(e.HTMLElement||e.Element||e.Node).prototype,B=!N.call(H,E),j=B?function(e){return e.nodeType===1}:function(e){return N.call(H,e)},F=B&&[],I=H.cloneNode,q=H.setAttribute,R=H.removeAttribute,U=t.createElement,z=P&&{attributes:!0,characterData:!0,attributeOldValue:!0},W=P||function(e){J=!1,E.removeEventListener(c,W)},X,V=e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.msRequestAnimationFrame||function(e){setTimeout(e,10)},$=!1,J=!0,K=!0,Q=!0,G,Y,Z,et,tt,nt;O||M?(tt=function(e,t){N.call(t,e)||ht(e,t)},nt=ht):(tt=function(e,t){e[i]||(e[i]=n(!0),ht(e,t))},nt=tt),B?(J=!1,function(){var e=k(H,"addEventListener"),t=e.value,n=function(e){var t=new CustomEvent(c,{bubbles:!0});t.attrName=e,t.prevValue=this.getAttribute(e),t.newValue=null,t[l]=t.attrChange=2,R.call(this,e),this.dispatchEvent(t)},r=function(e,t){var n=this.hasAttribute(e),r=n&&this.getAttribute(e),i=new CustomEvent(c,{bubbles:!0});q.call(this,e,t),i.attrName=e,i.prevValue=n?r:null,i.newValue=t,n?i[f]=i.attrChange=1:i[a]=i.attrChange=0,this.dispatchEvent(i)},s=function(e){var t=e.currentTarget,n=t[i],r=e.propertyName,s;n.hasOwnProperty(r)&&(n=n[r],s=new CustomEvent(c,{bubbles:!0}),s.attrName=n.name,s.prevValue=n.value||null,s.newValue=n.value=t[r]||null,s.prevValue==null?s[a]=s.attrChange=0:s[f]=s.attrChange=1,t.dispatchEvent(s))};e.value=function(e,o,u){e===c&&this.attributeChangedCallback&&this.setAttribute!==r&&(this[i]={className:{name:"class",value:this.className}},this.setAttribute=r,this.removeAttribute=n,t.call(this,"propertychange",s)),t.call(this,e,o,u)},C(H,"addEventListener",e)}()):P||(E.addEventListener(c,W),E.setAttribute(i,1),E.removeAttribute(i),J&&(G=function(e){var t=this,n,r,s;if(t===e.target){n=t[i],t[i]=r=Z(t);for(s in r){if(!(s in n))return Y(0,t,s,n[s],r[s],a);if(r[s]!==n[s])return Y(1,t,s,n[s],r[s],f)}for(s in n)if(!(s in r))return Y(2,t,s,n[s],r[s],l)}},Y=function(e,t,n,r,i,s){var o={attrChange:e,currentTarget:t,attrName:n,prevValue:r,newValue:i};o[s]=e,at(o)},Z=function(e){for(var t,n,r={},i=e.attributes,s=0,o=i.length;s<o;s++)t=i[s],n=t.name,n!=="setAttribute"&&(r[n]=t.value);return r})),t[r]=function(n,r){c=n.toUpperCase(),$||($=!0,P?(et=function(e,t){function n(e,t){for(var n=0,r=e.length;n<r;t(e[n++]));}return new P(function(r){for(var i,s,o,u=0,a=r.length;u<a;u++)i=r[u],i.type==="childList"?(n(i.addedNodes,e),n(i.removedNodes,t)):(s=i.target,Q&&s.attributeChangedCallback&&i.attributeName!=="style"&&(o=s.getAttribute(i.attributeName),o!==i.oldValue&&s.attributeChangedCallback(i.attributeName,i.oldValue,o)))})}(st(s),st(o)),et.observe(t,{childList:!0,subtree:!0})):(X=[],V(function E(){while(X.length)X.shift().call(null,X.shift());V(E)}),t.addEventListener("DOMNodeInserted",ft(s)),t.addEventListener("DOMNodeRemoved",ft(o))),t.addEventListener(h,lt),t.addEventListener("readystatechange",lt),t.createElement=function(e,n){var r=U.apply(t,arguments),i=""+e,s=S.call(y,(n?v:d)+(n||i).toUpperCase()),o=-1<s;return n&&(r.setAttribute("is",n=n.toLowerCase()),o&&(o=ut(i.toUpperCase(),n))),Q=!t.createElement.innerHTMLHelper,o&&nt(r,b[s]),r},H.cloneNode=function(e){var t=I.call(this,!!e),n=ot(t);return-1<n&&nt(t,b[n]),e&&it(t.querySelectorAll(w)),t}),-2<S.call(y,v+c)+S.call(y,d+c)&&dt(n);if(!m.test(c)||-1<S.call(g,c))throw new Error("The type "+n+" is invalid");var i=function(){return f?t.createElement(l,c):t.createElement(l)},a=r||x,f=T.call(a,u),l=f?r[u].toUpperCase():c,c,p;return f&&-1<S.call(y,d+l)&&dt(l),p=y.push((f?v:d)+c)-1,w=w.concat(w.length?",":"",f?l+'[is="'+n.toLowerCase()+'"]':l),i.prototype=b[p]=T.call(a,"prototype")?a.prototype:_(H),rt(t.querySelectorAll(w),s),i}})(window,document,Object,"registerElement");
+},{}],6:[function(require,module,exports){
 var scales = {
   major: [2, 2, 1, 2, 2, 2, 1],
   minor: [2, 1, 2, 2, 1, 2, 2],
@@ -355,7 +358,7 @@ function int2freq(intNote, options){
 module.exports = int2freq
 module.exports.scales = Object.keys(scales)
 module.exports.notes = Object.keys(notes)
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 /**
  * lodash 4.2.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -706,7 +709,7 @@ function isObjectLike(value) {
 
 module.exports = baseFlatten;
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 /**
  * lodash 4.0.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -748,7 +751,7 @@ function baseSlice(array, start, end) {
 
 module.exports = baseSlice;
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 /**
  * lodash 4.5.1 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -957,7 +960,7 @@ function isKeyable(value) {
 
 module.exports = baseUniq;
 
-},{"lodash._createset":9,"lodash._setcache":10}],9:[function(require,module,exports){
+},{"lodash._createset":10,"lodash._setcache":11}],10:[function(require,module,exports){
 (function (global){
 /**
  * lodash 4.0.2 (Custom Build) <https://lodash.com/>
@@ -1221,7 +1224,7 @@ function noop() {
 module.exports = createSet;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 (function (global){
 /**
  * lodash 4.1.3 (Custom Build) <https://lodash.com/>
@@ -1813,7 +1816,7 @@ function isNative(value) {
 module.exports = SetCache;
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 /**
  * lodash 4.0.5 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -2261,7 +2264,7 @@ function toNumber(value) {
 
 module.exports = chunk;
 
-},{"lodash._baseslice":7}],12:[function(require,module,exports){
+},{"lodash._baseslice":8}],13:[function(require,module,exports){
 /**
  * lodash 3.3.4 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -2785,7 +2788,7 @@ function toNumber(value) {
 
 module.exports = fill;
 
-},{}],13:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 /**
  * lodash 4.2.0 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -2817,7 +2820,7 @@ function flatten(array) {
 
 module.exports = flatten;
 
-},{"lodash._baseflatten":6}],14:[function(require,module,exports){
+},{"lodash._baseflatten":7}],15:[function(require,module,exports){
 /**
  * lodash 4.2.1 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
@@ -2852,7 +2855,7 @@ function uniq(array) {
 
 module.exports = uniq;
 
-},{"lodash._baseuniq":8}],15:[function(require,module,exports){
+},{"lodash._baseuniq":9}],16:[function(require,module,exports){
 module.exports = function(amount) {
   var k = typeof amount === 'number' ? amount : 50,
     n_samples = 44100,
@@ -2867,7 +2870,7 @@ module.exports = function(amount) {
   return curve;
 }
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 /*!
  * @name JavaScript/NodeJS Merge v1.2.0
  * @author yeikos
@@ -3043,7 +3046,7 @@ module.exports = function(amount) {
 	}
 
 })(typeof module === 'object' && module && typeof module.exports === 'object' && module.exports);
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict'
 
 var CHROMATIC = [ 'C', 'Db', 'D', 'Eb', 'E', 'F', 'Gb', 'G', 'Ab', 'A', 'Bb', 'B' ]
@@ -3073,7 +3076,7 @@ module.exports = function (midi) {
   return name + oct
 }
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 (function() {
 
 	var noteMap = {};
@@ -3139,7 +3142,7 @@ module.exports = function (midi) {
 }).call(this);
 
 
-},{}],19:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict'
 
 var transpose = require('note-transposer')
@@ -3334,7 +3337,7 @@ Key.scale = function (name) {
 
 module.exports = Key
 
-},{"music-notation/interval/parse":23,"music-notation/note/parse":27,"music-notation/note/str":29,"note-interval":33,"note-transposer":34}],20:[function(require,module,exports){
+},{"music-notation/interval/parse":24,"music-notation/note/parse":28,"music-notation/note/str":30,"note-interval":34,"note-transposer":35}],21:[function(require,module,exports){
 'use strict'
 
 /**
@@ -3358,7 +3361,7 @@ module.exports = function (num) {
   else return ''
 }
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict'
 
 // map from pitch number to number of fifths and octaves
@@ -3389,7 +3392,7 @@ module.exports = function (step, alt, oct, dur) {
   else return [f, o, dur]
 }
 
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict'
 
 // Map from number of fifths to interval number (0-index) and octave
@@ -3421,7 +3424,7 @@ module.exports = function (arr) {
   return [base[0], alter, oct, dur]
 }
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict'
 
 var memoize = require('../memoize')
@@ -3472,7 +3475,7 @@ module.exports = memoize(function (str) {
   return dir === 1 ? arr : [-arr[0], -arr[1]]
 })
 
-},{"../array/from-props":21,"../memoize":26,"./regex":24}],24:[function(require,module,exports){
+},{"../array/from-props":22,"../memoize":27,"./regex":25}],25:[function(require,module,exports){
 
 // shorthand tonal notation (with quality after number)
 var TONAL = '([-+]?)(\\d+)(d{1,4}|m|M|P|A{1,4}|b{1,4}|#{1,4}|)'
@@ -3493,7 +3496,7 @@ var COMPOSE = '(?:(' + TONAL + ')|(' + STRICT + '))'
  */
 module.exports = new RegExp('^' + COMPOSE + '$')
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 'use strict'
 
 var props = require('../array/to-props')
@@ -3548,7 +3551,7 @@ function build (coord) {
   return dir * num + q
 }
 
-},{"../array/to-props":22}],26:[function(require,module,exports){
+},{"../array/to-props":23}],27:[function(require,module,exports){
 'use strict'
 
 /**
@@ -3571,7 +3574,7 @@ module.exports = function (fn) {
   }
 }
 
-},{}],27:[function(require,module,exports){
+},{}],28:[function(require,module,exports){
 'use strict'
 
 var memoize = require('../memoize')
@@ -3617,7 +3620,7 @@ module.exports = memoize(function (str) {
   return [fifths, oct, dur]
 })
 
-},{"../memoize":26,"./regex":28}],28:[function(require,module,exports){
+},{"../memoize":27,"./regex":29}],29:[function(require,module,exports){
 'use strict'
 
 /**
@@ -3641,7 +3644,7 @@ module.exports = memoize(function (str) {
  */
 module.exports = /^([a-gA-G])(#{1,}|b{1,}|x{1,}|)(-?\d*)(\/\d+|)\s*(.*)\s*$/
 
-},{}],29:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict'
 
 var props = require('../array/to-props')
@@ -3683,7 +3686,7 @@ function build (coord) {
   return LETTER[p[0]] + acc(p[1]) + (p[2] !== null ? p[2] : '') + (p[3] !== null ? '/' + p[3] : '')
 }
 
-},{"../accidentals/str":20,"../array/to-props":22}],30:[function(require,module,exports){
+},{"../accidentals/str":21,"../array/to-props":23}],31:[function(require,module,exports){
 'use strict'
 
 function curry (fn, arity) {
@@ -3726,7 +3729,7 @@ module.exports = function op (parse, str, fn) {
   }, fn.length)
 }
 
-},{}],31:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 var note = require('../note/parse')
 var interval = require('../interval/parse')
 
@@ -3745,7 +3748,7 @@ var interval = require('../interval/parse')
  */
 module.exports = function (n) { return note(n) || interval(n) }
 
-},{"../interval/parse":23,"../note/parse":27}],32:[function(require,module,exports){
+},{"../interval/parse":24,"../note/parse":28}],33:[function(require,module,exports){
 var note = require('../note/str')
 var interval = require('../interval/str')
 
@@ -3769,7 +3772,7 @@ var interval = require('../interval/str')
  */
 module.exports = function (n) { return note(n) || interval(n) }
 
-},{"../interval/str":25,"../note/str":29}],33:[function(require,module,exports){
+},{"../interval/str":26,"../note/str":30}],34:[function(require,module,exports){
 var parse = require('music-notation/pitch/parse')
 var str = require('music-notation/pitch/str')
 var notation = require('music-notation/operation')(parse, str)
@@ -3807,7 +3810,7 @@ module.exports = notation(function (a, b) {
   return [b[0] - a[0], b[1] - a[1]]
 })
 
-},{"music-notation/operation":30,"music-notation/pitch/parse":31,"music-notation/pitch/str":32}],34:[function(require,module,exports){
+},{"music-notation/operation":31,"music-notation/pitch/parse":32,"music-notation/pitch/str":33}],35:[function(require,module,exports){
 var parse = require('music-notation/pitch/parse')
 var str = require('music-notation/pitch/str')
 var operation = require('music-notation/operation')(parse, str)
@@ -3847,7 +3850,7 @@ var transpose = operation(function (i, n) {
 if (typeof module === 'object' && module.exports) module.exports = transpose
 if (typeof window !== 'undefined') window.transpose = transpose
 
-},{"music-notation/operation":30,"music-notation/pitch/parse":31,"music-notation/pitch/str":32}],35:[function(require,module,exports){
+},{"music-notation/operation":31,"music-notation/pitch/parse":32,"music-notation/pitch/str":33}],36:[function(require,module,exports){
 (function() {
 
 	var setterGetterify = require('setter-getterify');
@@ -3958,7 +3961,7 @@ if (typeof window !== 'undefined') window.transpose = transpose
 
 
 
-},{"safe-register-element":39,"setter-getterify":41}],36:[function(require,module,exports){
+},{"safe-register-element":40,"setter-getterify":42}],37:[function(require,module,exports){
 'use strict';
 module.exports = function (data, options) {
 	options = options || {};
@@ -3982,7 +3985,7 @@ module.exports = function (data, options) {
 	return ret;
 };
 
-},{}],37:[function(require,module,exports){
+},{}],38:[function(require,module,exports){
 var makeDistortionCurve = require('make-distortion-curve')
 var MIDIUtils = require('midiutils')
 var adsr = require('a-d-s-r')
@@ -4136,7 +4139,7 @@ module.exports = function (ac, opts) {
     }
   }
 }
-},{"a-d-s-r":3,"make-distortion-curve":15,"midiutils":18}],38:[function(require,module,exports){
+},{"a-d-s-r":3,"make-distortion-curve":16,"midiutils":19}],39:[function(require,module,exports){
 var makeDistortionCurve = require('make-distortion-curve')
 var adsr = require('a-d-s-r')
 // yr function should accept an audioContext, and optional params/opts
@@ -4243,7 +4246,7 @@ module.exports = function (ac, opts) {
     }
   }
 }
-},{"a-d-s-r":3,"make-distortion-curve":15}],39:[function(require,module,exports){
+},{"a-d-s-r":3,"make-distortion-curve":16}],40:[function(require,module,exports){
 module.exports = function safeRegistration(name, prototype) {
 	try {
 		document.registerElement(name, {
@@ -4254,7 +4257,7 @@ module.exports = function safeRegistration(name, prototype) {
 	}
 };
 
-},{}],40:[function(require,module,exports){
+},{}],41:[function(require,module,exports){
 (function() {
 	var proto = Object.create(HTMLElement.prototype)
 
@@ -4348,7 +4351,7 @@ module.exports = function safeRegistration(name, prototype) {
 
 }).call(this)
 
-},{}],41:[function(require,module,exports){
+},{}],42:[function(require,module,exports){
 module.exports = setterGetterify;
 
 
@@ -4387,7 +4390,7 @@ function setProperty(properties, name, value) {
 
 
 
-},{}],42:[function(require,module,exports){
+},{}],43:[function(require,module,exports){
 function pick (arr) {
   // console.log(arr)
   return arr[~~(Math.random() * arr.length)]
@@ -4440,7 +4443,7 @@ module.exports = function (currentSong) {
   }
 }
 
-},{}],43:[function(require,module,exports){
+},{}],44:[function(require,module,exports){
 var adsr = require('a-d-s-r')
 var makeDistortionCurve = require('make-distortion-curve')
 module.exports = function (ac, opts) {
@@ -4498,7 +4501,7 @@ module.exports = function (ac, opts) {
     }
   }
 }
-},{"a-d-s-r":3,"make-distortion-curve":15}],44:[function(require,module,exports){
+},{"a-d-s-r":3,"make-distortion-curve":16}],45:[function(require,module,exports){
 function getSections(e){var t=e.split(/\n/),n=[],r=[];return t.forEach(function(e){var t=/([A-Ga-g]{0,1}[#b]{0,1})[\|\]]{0,1}([\-0-9\|\/\^\(\)\\hbpv]+)/;e.match(t)?(r.push(e),6==r.length&&(n.push(r),r=[])):(4==r.length&&n.push(r),r=[])}),n}function replaceNotes(e){return JSON.parse(JSON.stringify(e)).reverse().map(function(e,t){var n=MIDI_NOTES[t],r=e.replace(/[^\d-]/g,"").split("");return r.map(function(e){return"-"!==e?n+~~e:""})}).reverse()}function getKey(e){var t=e.map(function(e){return e.filter(function(e){return e}).map(function(e){return midinote(e).replace(/\d+$/g,"")})}),n=uniq(flatten(t)).map(function(e){return e.replace(/^\w/,"")}).filter(function(e){return e});return key(n.join(""))||"C"}function getMiddle(e){var t=uniq(flatten(e).filter(function(e){return e})).sort();return t[~~(t.length/2)]}function getRootNoteNumber(e,t){if(midinote(e)&&midinote(e).replace(/\d+/,"")==t)return e;for(var n,r=1;12>=r;){if(midinote(e+r).replace(/\d+/,"")==t){n=e+r;break}if(midinote(e-r).replace(/\d+/,"")==t){n=e-r;break}r++}return n}function convertNotesToIndices(e,t,n){var r=~~(e[0].length/t),o=midinote(n);return e.map(function(e){return chunk(e,r).map(function(e){return e.filter(function(e){return e}).map(function(e){var t=e>n?1:-1,r=Math.abs(e-n)>=12?7:1,i=Math.abs(midinote(e).charCodeAt(0)-o.charCodeAt(0));return i*t*r})})}).reduce(function(e,t){return e.map(function(e,n){return e.concat(t[n])})},fill(Array(t),[]))}function processTab(e,t){var n=getSections(e).map(function(e){return replaceNotes(e)}),r=n.reduce(function(e,t){return e.concat(t)},[]),o=getRootNoteNumber(getMiddle(r),getKey(r).replace(/\s\w+/,""));return n.map(function(e){return convertNotesToIndices(e,t,o)})}var midinote=require("midi-note"),uniq=require("lodash.uniq"),flatten=require("lodash.flatten"),chunk=require("lodash.chunk"),key=require("music-key"),fill=require("lodash.fill"),MIDI_NOTES=[40,45,50,55,59,64];module.exports={getSections:getSections,replaceNotes:replaceNotes,getKey:getKey,getMiddle:getMiddle,getRootNoteNumber:getRootNoteNumber,convertNotesToIndices:convertNotesToIndices,processTab:processTab};
 
-},{"lodash.chunk":11,"lodash.fill":12,"lodash.flatten":13,"lodash.uniq":14,"midi-note":17,"music-key":19}]},{},[1]);
+},{"lodash.chunk":12,"lodash.fill":13,"lodash.flatten":14,"lodash.uniq":15,"midi-note":18,"music-key":20}]},{},[1]);

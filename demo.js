@@ -14,6 +14,7 @@ var synths = {
   pp: pie(ac),
   sm: pie(ac)
 }
+require('document-register-element')
 require('scale-select').register('scale-select');
 
 require('openmusic-slider').register('openmusic-slider');
@@ -44,7 +45,19 @@ var int2freq = require('int2freq')
 
 var sq, the_ui
 
-document.body.addEventListener('paste', function(e){
+document.body.addEventListener('paste', doit);
+
+document.getElementById('theinput').addEventListener('paste', doit)
+
+
+
+
+
+
+
+
+
+function doit (e){
 
   if (sq) {
     sq.stop()
@@ -229,4 +242,4 @@ document.body.appendChild(the_ui)
     console.log(e)
     alert('very sorry, something broke, not to worry, refresh the page and perhaps another guitar or bass tab will work better?')
   }
-});
+}
