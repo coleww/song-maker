@@ -159,7 +159,7 @@
           probs: [],
           currentVersion: 0,
           currentTick: 0,
-          mod: 4,
+          mod: 1,
           nexts: []
         }
       }
