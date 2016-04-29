@@ -66,7 +66,7 @@ document.body.addEventListener('paste', function(e){
 
 
   var data = e.clipboardData.getData('text/plain');
-  // try {
+  try {
 
 
 
@@ -160,6 +160,10 @@ the_ui.className = "super-simple layover"
 
       sq = seq(song)
 console.log(sq)
+var msg = document.createElement('h4')
+msg.textContent = 'ROCK ON, KEYBOARD CAT!'
+the_ui.appendChild(msg)
+
 var scaleSelect = document.createElement('scale-select')
 the_ui.appendChild(scaleSelect)
 
@@ -221,8 +225,8 @@ document.body.appendChild(the_ui)
 
 
 
-  // } catch (e) {
-    // console.log(e)
-    // alert('very sorry, something broke, not to worry, maybe another guitar or bass tab will work better?')
-  // }
+  } catch (e) {
+    console.log(e)
+    alert('very sorry, something broke, not to worry, refresh the page and perhaps another guitar or bass tab will work better?')
+  }
 });
