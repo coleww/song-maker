@@ -1,19 +1,18 @@
 var proc = require('./processtab')
 window.AudioContext = window.AudioContext || window.webkitAudioContext
 var ac = new AudioContext()
+var pie = require("pie-ano")
 // var ui = require('web-audio-ui').generate
   var mainVolume = ac.createGain()
   mainVolume.connect(ac.destination)
   mainVolume.gain.setValueAtTime(0.5, ac.currentTime)
 var synths = {
       snare: require("dj-snazzy-snare")(ac),
-    tom: require("tom-from-space")(ac),
     kick: require("touch-down-dance")(ac),
     hat: require("really-hi-hat")(ac),
-  bb: require("pie-ano")(ac),
-  pp: require("pie-ano")(ac),
-  sm: require("sparkle-motion")(ac),
-  wb: require("sparkle-motion")(ac)
+  bb: pie(ac),
+  pp: pie(ac),
+  sm: pie(ac)
 }
 require('scale-select').register('scale-select');
 
@@ -21,7 +20,6 @@ require('openmusic-slider').register('openmusic-slider');
 
 
 
-      var the_ui = document.createElement('div')
 
 Object.keys(synths).forEach(function(ik) {
       synths[ik].connect(mainVolume)
@@ -39,18 +37,35 @@ Object.keys(synths).forEach(function(ik) {
 var seq = require("spiderbite")
 
 
-var song = require('./demoSong')
+var the_song = require('./demoSong')
 var pick = require('pick-random')
 var merge = require('merge')
 var int2freq = require('int2freq')
 
-
+var sq, the_ui
 
 document.body.addEventListener('paste', function(e){
+
+  if (sq) {
+    sq.stop()
+    the_ui.remove()
+} else {
+       document.getElementById('notes').remove()
+
+    // document.body.appendChild(the_ui)
+}
+
+  var song = JSON.parse(JSON.stringify(the_song))
+
+
+
+
+
+
+
   var data = e.clipboardData.getData('text/plain');
   // try {
-    document.getElementById('notes').remove()
-    document.body.appendChild(the_ui)
+
     var stuff = proc.processTab(data, 8)
     // chop up the stuffs somehow, divide among the instruments
     // just make a base "song" thing?
@@ -113,12 +128,13 @@ document.body.addEventListener('paste', function(e){
 
 
 
+      the_ui = document.createElement('div')
 
 
-      var sq = seq(song)
+      sq = seq(song)
 console.log(sq)
 var scaleSelect = document.createElement('scale-select')
-document.body.appendChild(scaleSelect)
+the_ui.appendChild(scaleSelect)
 
 
 scaleSelect.addEventListener('tonic', function(ev) {
@@ -141,9 +157,10 @@ scaleSelect.addEventListener('scale', function(ev) {
 
 var coolSlider = document.createElement('openmusic-slider');
 coolSlider.min = 10
-coolSlider.max = 1000
-coolSlider.value = song.bpm
-document.body.appendChild(coolSlider);
+coolSlider.max = 640
+console.log(coolSlider)
+coolSlider.value = 320
+the_ui.appendChild(coolSlider);
 
 coolSlider.addEventListener('change', function (ev) {
   console.log(ev)
@@ -156,7 +173,7 @@ coolSlider.addEventListener('change', function (ev) {
 
 
 
-
+document.body.appendChild(the_ui)
 
 
 
