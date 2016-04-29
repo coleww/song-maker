@@ -187,7 +187,7 @@ scaleSelect.addEventListener('scale', function(ev) {
 });
 
 var coolSlider = document.createElement('openmusic-slider');
-coolSlider.min = 50
+coolSlider.min = 100
 coolSlider.max = 300
 console.log(coolSlider)
 coolSlider.value = 320

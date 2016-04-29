@@ -170,7 +170,7 @@
   nexts: {
     verse: ["verse"]
   },
-  bpm: 175,
+  bpm: 200,
   key: {
     tonic: "D3",
     scale: "major"
