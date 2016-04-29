@@ -51,8 +51,10 @@ document.body.addEventListener('paste', function(e){
     the_ui.remove()
 } else {
        document.getElementById('notes').remove()
+       var iframe = document.createElement('div')
+       iframe.innerHTML = '<iframe width="100%" height="100%" class="super-center"  src="https://www.youtube.com/embed/O2ulyJuvU3Q?autoplay=1" frameborder="0" allowfullscreen></iframe>'
 
-    // document.body.appendChild(the_ui)
+      document.body.appendChild(iframe)
 }
 
   var song = JSON.parse(JSON.stringify(the_song))
@@ -67,8 +69,6 @@ document.body.addEventListener('paste', function(e){
   // try {
 
 
-
-    var lyrics = data.split('\n')
 
 
 
@@ -124,25 +124,25 @@ document.body.addEventListener('paste', function(e){
 
 
 
-      song.instruments.push({
-        config: {},
-        melodic: false,
-        patterns: {
-          verse: {
-            probs: [
-              [1, 0, 0, 0]
-            ],
-            currentVersion: 0,
-            currentTick: 0,
-            mod: 16,
-            nexts: [[0]]
-          }
-        },
-        play: function (arg) {
-          var msg = new SpeechSynthesisUtterance('Hello World');
-          window.speechSynthesis.speak(msg);
-        }
-      })
+      // song.instruments.push({
+      //   config: {},
+      //   melodic: false,
+      //   patterns: {
+      //     verse: {
+      //       probs: [
+      //         [1, 0, 0, 0]
+      //       ],
+      //       currentVersion: 0,
+      //       currentTick: 0,
+      //       mod: 16,
+      //       nexts: [[0]]
+      //     }
+      //   },
+      //   play: function (arg) {
+      //     var msg = new SpeechSynthesisUtterance('Hello World');
+      //     window.speechSynthesis.speak(msg);
+      //   }
+      // })
 
 
 
@@ -155,7 +155,8 @@ document.body.addEventListener('paste', function(e){
 
 
       the_ui = document.createElement('div')
-
+the_ui.id = 'main'
+the_ui.className = "super-simple layover"
 
       sq = seq(song)
 console.log(sq)
@@ -182,8 +183,8 @@ scaleSelect.addEventListener('scale', function(ev) {
 });
 
 var coolSlider = document.createElement('openmusic-slider');
-coolSlider.min = 10
-coolSlider.max = 640
+coolSlider.min = 50
+coolSlider.max = 420
 console.log(coolSlider)
 coolSlider.value = 320
 the_ui.appendChild(coolSlider);
@@ -196,6 +197,8 @@ coolSlider.addEventListener('change', function (ev) {
   sq.updateSong(song)
   sq.start()
 })
+
+
 
 
 

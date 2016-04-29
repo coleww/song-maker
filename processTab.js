@@ -12,11 +12,11 @@ function getSections (tabData) {
   var sections = []
   var current = []
   lines.forEach(function (line) {
-    console.log(line)
+    // console.log(line)
     // regex from: http://knowles.co.za/parsing-guitar-tab/
     var patt = /([A-Ga-g]{0,1}[#b]{0,1})[\|\]]{0,1}([\-0-9\|\/\^\(\)\\hbpv]+)/;
     if (line.match(patt)) {
-      console.log(line)
+      // console.log(line)
       current.push(line)
       if (current.length == 6) {
         sections.push(current)
@@ -27,7 +27,7 @@ function getSections (tabData) {
       current = []
     }
   })
-  console.log(sections)
+  // console.log(sections)
   return sections
 }
 
@@ -48,7 +48,7 @@ function getKey (section) {
       return midinote(note).replace(/\d+$/g, '')
     })
   })
-  console.log('notes',notes)
+  // console.log('notes',notes)
   var accidentals = uniq(flatten(notes)).map(function (note) {
     return note.replace(/^\w/, '')
   }).filter(function (e) {return e})
@@ -58,13 +58,13 @@ function getKey (section) {
 
 function getMiddle (section) {
   var allTheNotesAllLinedUp = uniq(flatten(section).filter(function (e) {return e})).sort()
-  console.log('allthem', allTheNotesAllLinedUp)
+  // console.log('allthem', allTheNotesAllLinedUp)
   return allTheNotesAllLinedUp[~~(allTheNotesAllLinedUp.length / 2)]
 }
 
 function getRootNoteNumber (middle, target) {
-  console.log('getRoot', middle, target)
-  console.log(midinote(middle))
+  // console.log('getRoot', middle, target)
+  // console.log(midinote(middle))
   if (midinote(middle) && midinote(middle).replace(/\d+/, '') == target) {
     return middle
   } else {
@@ -99,7 +99,7 @@ function convertNotesToIndices (notes, beats, rootNote) {
         var multiplier = note > rootNote ? 1 : -1
         var octaved = Math.abs(note - rootNote) >= 12 ? 7 : 1
         var diff = Math.abs(midinote(note).charCodeAt(0) - root.charCodeAt(0))
-        if (typeof (diff * multiplier * octaved) !== 'number') console.log(multiplier, octaved, diff, note, root, midinote(note))
+        // if (typeof (diff * multiplier * octaved) !== 'number') console.log(multiplier, octaved, diff, note, root, midinote(note))
         return diff * multiplier * octaved
       })
     })
@@ -121,7 +121,7 @@ function processTab (tab, beats) {
   // console.log(notes)
   var allTheNotes = notes.reduce(function (a, b) {return a.concat(b)}, [])
   // console.log(root)
-  console.log(getKey(allTheNotes))
+  // console.log(getKey(allTheNotes))
   var root = getRootNoteNumber(getMiddle(allTheNotes), getKey(allTheNotes).replace(/\s\w+/, ''))
   return notes.map(function (section) {
     return convertNotesToIndices(section, beats, root)
