@@ -21,7 +21,7 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 70%;
+  width: 100%;
   height: 70%;
 }
 .layover {
@@ -31,8 +31,5 @@ body {
   overflow: scroll;
   overflow-x: auto;
   overflow-y: auto;
-  padding: 10%;
-  padding-top: 5%;
-  padding-bottom: 5%;
   text-align: right;
 }
