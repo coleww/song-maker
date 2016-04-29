@@ -66,6 +66,14 @@ document.body.addEventListener('paste', function(e){
   var data = e.clipboardData.getData('text/plain');
   // try {
 
+
+
+    var lyrics = data.split('\n')
+
+
+
+
+
     var stuff = proc.processTab(data, 8)
     // chop up the stuffs somehow, divide among the instruments
     // just make a base "song" thing?
@@ -116,7 +124,25 @@ document.body.addEventListener('paste', function(e){
 
 
 
-
+      song.instruments.push({
+        config: {},
+        melodic: false,
+        patterns: {
+          verse: {
+            probs: [
+              [1, 0, 0, 0]
+            ],
+            currentVersion: 0,
+            currentTick: 0,
+            mod: 16,
+            nexts: [[0]]
+          }
+        },
+        play: function (arg) {
+          var msg = new SpeechSynthesisUtterance('Hello World');
+          window.speechSynthesis.speak(msg);
+        }
+      })
 
 
 

@@ -8,8 +8,8 @@
         decay: 0.01,
         sustain: 0.12,
         release: 0.13,
-        peak: 0.95,
-        mid: 0.65,
+        peak: 0.795,
+        mid: 0.565,
         end: 0.000000000000000000001
       },
       patterns: {
@@ -65,15 +65,15 @@
         noisedecay: 0.000001,
         noisesustain: 0.175,
         noiserelease: 0.125,
-        noisepeak: 0.2123425,
-        noisemid: 0.1341215,
+        noisepeak: 0.12123425,
+        noisemid: 0.071341215,
         noiseend: 0.000001,
         triattack: 0.0000001,
         tridecay: 0.00000001,
         trisustain: 0.1175,
         trirelease: 0.125,
-        tripeak: 0.32487,
-        trimid: 0.21375,
+        tripeak: 0.1232487,
+        trimid: 0.1121375,
         triend: 0.000001
       },
       patterns: {
@@ -99,38 +99,16 @@
     },
     pp: {
       config: {
-        attack: 0.13,
+        attack: 0.0513,
         decay: 0.1,
-        sustain: 0.13,
+        sustain: 0.0513,
         release: 0.125,
         peak: 0.2345,
-        mid: 0.123,
-        end: 0.051},
+        mid: 0.223,
+        end: 0.000051},
       lead: true,
       melodic: true,
       multi: 1,
-      patterns: {
-        verse: {
-          notes: [],
-          probs: [],
-          currentVersion: 0,
-          currentTick: 0,
-          mod: 1,
-          nexts: []
-        }
-      }
-    },
-    bb: {
-      config: {
-        attack: 0.03,
-        decay: 0.1,
-        sustain: 0.13,
-        release: 0.135,
-        peak: 0.1345,
-        mid: 0.123,
-        end: 0.051},
-      melodic: true,
-      multi: 2,
       patterns: {
         verse: {
           notes: [],
@@ -142,17 +120,17 @@
         }
       }
     },
-    sm: {
+    bb: {
       config: {
-        attack: 0.03,
+        attack: 0.0613,
         decay: 0.1,
-        sustain: 0.13,
-        release: 0.15,
-        peak: 0.2345,
-        mid: 0.123,
-        end: 0.051},
-      multi: -2,
+        sustain: 0.051513,
+        release: 0.05135,
+        peak: 0.211345,
+        mid: 0.109123,
+        end: 0.00051},
       melodic: true,
+      multi: 2,
       patterns: {
         verse: {
           notes: [],
@@ -160,6 +138,28 @@
           currentVersion: 0,
           currentTick: 0,
           mod: 1,
+          nexts: []
+        }
+      }
+    },
+    sm: {
+      config: {
+        attack: 0.3,
+        decay: 0.31,
+        sustain: 0.213,
+        release: 0.215,
+        peak: 0.12345,
+        mid: 0.0511123,
+        end: 0.00000051},
+      multi: 4,
+      melodic: true,
+      patterns: {
+        verse: {
+          notes: [],
+          probs: [],
+          currentVersion: 0,
+          currentTick: 0,
+          mod: 4,
           nexts: []
         }
       }
