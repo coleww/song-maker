@@ -65,7 +65,7 @@ function doit (e){
 } else {
        document.getElementById('notes').remove()
        var iframe = document.createElement('div')
-       iframe.innerHTML = '<iframe width="100%" height="100%" class="super-center"  src="https://www.youtube.com/embed/O2ulyJuvU3Q?autoplay=1" controls="0" frameborder="0" allowfullscreen  volume="0"></iframe>'
+       iframe.innerHTML = '<img src="kitty.gif" style="width: 100%; height: 100%;">'
 
       document.body.appendChild(iframe)
 }
