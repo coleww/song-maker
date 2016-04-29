@@ -99,13 +99,13 @@
     },
     pp: {
       config: {
-        attack: 0.0513,
+        attack: 0.1513,
         decay: 0.1,
-        sustain: 0.0513,
+        sustain: 0.1513,
         release: 0.125,
-        peak: 0.2345,
-        mid: 0.223,
-        end: 0.000051},
+        peak: 0.652345,
+        mid: 0.423,
+        end: 0.0051},
       lead: true,
       melodic: true,
       multi: 1,
@@ -128,7 +128,7 @@
         release: 0.05135,
         peak: 0.211345,
         mid: 0.109123,
-        end: 0.00051},
+        end: 0.000051},
       melodic: true,
       multi: 2,
       patterns: {
@@ -151,7 +151,7 @@
         peak: 0.12345,
         mid: 0.0511123,
         end: 0.00000051},
-      multi: 4,
+      multi: 2,
       melodic: true,
       patterns: {
         verse: {
@@ -159,7 +159,7 @@
           probs: [],
           currentVersion: 0,
           currentTick: 0,
-          mod: 1,
+          mod: 4,
           nexts: []
         }
       }
@@ -170,7 +170,7 @@
   nexts: {
     verse: ["verse"]
   },
-  bpm: 235,
+  bpm: 175,
   key: {
     tonic: "D3",
     scale: "major"

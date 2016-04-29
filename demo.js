@@ -188,7 +188,7 @@ scaleSelect.addEventListener('scale', function(ev) {
 
 var coolSlider = document.createElement('openmusic-slider');
 coolSlider.min = 50
-coolSlider.max = 420
+coolSlider.max = 300
 console.log(coolSlider)
 coolSlider.value = 320
 the_ui.appendChild(coolSlider);
