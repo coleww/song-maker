@@ -100,7 +100,9 @@ function convertNotesToIndices (notes, beats, rootNote) {
         var octaved = Math.abs(note - rootNote) >= 12 ? 7 : 1
         var diff = Math.abs(midinote(note).charCodeAt(0) - root.charCodeAt(0))
         // if (typeof (diff * multiplier * octaved) !== 'number') console.log(multiplier, octaved, diff, note, root, midinote(note))
-        return diff * multiplier * octaved
+        var thing = diff * multiplier * octaved
+        if (Math.abs(thing) > 14) thing = thing % 7
+        return thing
       })
     })
   }).reduce(function (result, row) {

@@ -67,10 +67,12 @@ document.body.addEventListener('paste', function(e){
 
   var data = e.clipboardData.getData('text/plain');
 
-    var stuff = proc.processTab(data, 8)
+    var stuff = proc.processTab(data, 8).filter(function (x) {
+      return typeof x[0][0] === 'number'
+    })
     // chop up the stuffs somehow, divide among the instruments
     // just make a base "song" thing?
-    console.log(stuff)
+    console.log(JSON.stringify(stuff))
   // try {
 
 

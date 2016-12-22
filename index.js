@@ -12,7 +12,16 @@ fs.readdirSync('./tabs').forEach(function (the_first) {
     // console.log(the_first)
     $ = cheerio.load(fs.readFileSync('./tabs/' + the_first).toString())
     var tabData = $('pre.js-tab-content').text()
-    fs.writeFileSync('./output/' + the_first, JSON.stringify(processor.processTab(tabData, 16)))
+    var the_goods = processor.processTab(tabData, 16).filter(function (x) {
+      // console.log(x)
+      return x.every(function (cell) {
+        return cell.length === 0 || cell.every(function (nut) {
+          return nut !== undefined
+        })
+      })
+      return typeof x[0][0] === 'number'
+    })
+    if (the_goods.length) fs.writeFileSync('./output/' + the_first, JSON.stringify(the_goods))
   } catch (e) {
     // console.log(e)
   }
